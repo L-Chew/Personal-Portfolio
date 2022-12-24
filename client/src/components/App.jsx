@@ -1,13 +1,15 @@
-import React, {useState, useEffect} from 'react';
-
-
+import React from 'react';
+import Entry from './Entry.jsx';
+import Footer from './Footer.jsx';
+import Projects from './Projects.jsx';
 
 const App = () => {
-
   return (
-    <div>
-
-    </div>
+    <>
+      <Entry/>
+      <Projects/>
+      <Footer/>
+    </>
   )
 }
 

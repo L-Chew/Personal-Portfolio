@@ -6,3 +6,4 @@ import App from './components/App.jsx';
 const root = ReactDom.createRoot(document.getElementById('app'));
 
 root.render(<App />);
+
