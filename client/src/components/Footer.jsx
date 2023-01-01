@@ -18,8 +18,8 @@ const Footer = () => {
       <StyledFooterContainer className='footerContainer'>
         <h5> This website is powered by: </h5>
         <div className='footerIconsContainer'>
-          <icons>React</icons>
-          <icons>Babel</icons>
+          {/* <icons>React</icons>
+          <icons>Babel</icons> */}
         </div>
       </StyledFooterContainer>
     </>
