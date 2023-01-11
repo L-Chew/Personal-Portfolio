@@ -25,6 +25,9 @@ const Button = styled.button `
   border: none;
   padding: 0 1rem;
   font-style: inherit;
+  &:hover {
+    color: pink;
+  }
 `;
 
 const Numbers = styled.div `
