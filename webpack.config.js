@@ -7,7 +7,7 @@ module.exports = {
   entry: [`${SRC_DIR}/index.js`],
   output: {
     filename: 'bundle.js',
-    path: DIST_DIR
+    path: DIST_DIR,
   },
   devtool: 'source-map',
   module: {
@@ -35,6 +35,18 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|otf|ico)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          },
+        ],
       }
     ]
   }

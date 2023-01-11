@@ -25,14 +25,21 @@ import styled from 'styled-components';
 //   grid-area: intro;
 // `;
 
+const IntroContainer = styled.div `
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 100px 0;
+`;
+
 const Entry = () => {
   return (
-    <div className='introContainer'>
+    <IntroContainer>
       <div> Hi, my name is </div>
       <div> Lorene Chew </div>
-      <div> Simplicity can be a good thing </div>
+      <div> Simplicity is a good thing </div>
       <div> I'm a software engineer who likes to focus on design, aesthetics, and efficiency. </div>
-    </div>
+    </IntroContainer>
   )
 }
 

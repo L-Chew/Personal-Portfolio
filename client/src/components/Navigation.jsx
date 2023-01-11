@@ -7,7 +7,7 @@ const GridLayout = styled.div `
   grid-template-areas:
     /* 'blank blank Container' */
     /* 'Icon blank OrderedList' */
-    'i . navi';
+    'i .  navi';
   border-style: none;
 `;
 
@@ -41,6 +41,8 @@ const Icon = styled.div `
   display: flex;
   justify-content: left;
   align-items: center;
+  color: pink;
+  font-size: 30px;
 
 
 `;
@@ -55,13 +57,17 @@ const OrderedList = styled.ol `
 const ListItem = styled.li `
   /* display: list-item; */
   color: pink;
+  padding-right: 0.5rem;
 `;
 
 const Link = styled.a `
   display: flex;
   text-decoration: none;
-  color: inherit;
+  color: white;
   position: relative;
+  &:hover {
+    color: pink
+  }
 `;
 
 const Navigation = () => {
