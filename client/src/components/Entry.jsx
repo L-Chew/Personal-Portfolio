@@ -27,10 +27,12 @@ const Intro = styled.div `
 
 const Entry = () => {
   return (
-    <GridLayout>
-      <Name> lorenechi </Name>
-      <Intro> this is my story </Intro>
-    </GridLayout>
+    <div className='introContainer'>
+      <div> Hi, my name is </div>
+      <div> Lorene Chew </div>
+      <div> Simplicity can be a good thing </div>
+      <div> I'm a software engineer who likes to focus on design, aesthetics, and efficiency. </div>
+    </div>
   )
 }
 
