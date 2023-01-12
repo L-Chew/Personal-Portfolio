@@ -2,9 +2,12 @@ import React from 'react';
 import GlobalFonts from '../globalStyles.jsx';
 import styled from 'styled-components';
 import Navigation from './Navigation.jsx';
-import Entry from './Entry.jsx';
-import Footer from './Footer.jsx';
+import Intro from './Intro.jsx';
+import About from './About.jsx';
+import Experience from './Experience.jsx';
 import Projects from './Projects.jsx';
+import Contact from './Contact.jsx';
+import Footer from './Footer.jsx';
 
 const AppGrid = styled.div `
   display: grid;
@@ -17,8 +20,11 @@ const App = () => {
     <AppGrid>
       <GlobalFonts/>
       <Navigation/>
-      <Entry/>
+      <Intro/>
+      <About/>
+      <Experience/>
       <Projects/>
+      <Contact/>
       <Footer/>
     </AppGrid>
   )

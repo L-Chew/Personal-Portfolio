@@ -8,7 +8,7 @@ const IntroContainer = styled.div `
   margin: 100px 0;
 `;
 
-const Intro = styled.div `
+const Opening = styled.div `
   color: #ff79be9d;
 `;
 const Name = styled.div `
@@ -24,10 +24,10 @@ const Slogan = styled.div `
   color: #fbcde59d;
 `;
 
-const Entry = () => {
+const Intro = () => {
   return (
     <IntroContainer>
-      <Intro> Hi, my name is </Intro>
+      <Opening> Hi, my name is </Opening>
       <Name> Lorene Chew </Name>
       <Slogan> Simplicity is a good thing </Slogan>
       <div> I'm a software engineer who likes to focus on design, aesthetics, and efficiency. </div>
@@ -35,4 +35,4 @@ const Entry = () => {
   )
 }
 
-export default Entry;
+export default Intro;

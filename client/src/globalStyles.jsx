@@ -28,6 +28,17 @@ const GlobalFonts = createGlobalStyle`
         color:#fbcde59d;
     }
 
+    .sections {
+        display: flex;
+        flex-direction: row;
+        font-size: 25px;
+        color: #c2c2c2;
+    }
+    .sectionNums {
+        color: #ff79be9d;
+        padding-right: 0.5rem;
+    }
+
 `;
 
 export default GlobalFonts;

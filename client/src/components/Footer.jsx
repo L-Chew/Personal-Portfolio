@@ -1,28 +1,39 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const FooterContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: GambarinoRegular;
+  font-size: 10px;
+  margin-top: 5rem;
+`;
 
-// const StyledFooterContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   background-color: #d9d9f8;
-// `;
+const IconsContainer = styled.div `
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+`;
 
 const Footer = () => {
 
 
   return (
-    <>
-      <div className='footerContainer'>
-        <h5> This website is powered by: </h5>
-        <div className='footerIconsContainer'>
-          {/* <icons>React</icons>
-          <icons>Babel</icons> */}
-        </div>
-      </div>
-    </>
+    <FooterContainer>
+      <div> This website is powered by: </div>
+      <IconsContainer>
+        <div>React</div>
+        <div>Babel</div>
+        <div>Webpack</div>
+      </IconsContainer>
+      <div> © 2023 Lorene Chew. All rights reserved. </div>
+    </FooterContainer>
+
 
   )
 }
