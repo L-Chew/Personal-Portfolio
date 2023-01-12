@@ -37,14 +37,13 @@ const GridLayout = styled.div `
 // `;
 
 const Icon = styled.div `
+  font-family: 'Beautica';
   grid-area: i;
   display: flex;
   justify-content: left;
   align-items: center;
-  color: pink;
+  color: #ff79be9d;
   font-size: 30px;
-
-
 `;
 
 const OrderedList = styled.ol `
@@ -56,17 +55,17 @@ const OrderedList = styled.ol `
 
 const ListItem = styled.li `
   /* display: list-item; */
-  color: pink;
+  color: #ff79be9d;
   padding-right: 0.5rem;
 `;
 
 const Link = styled.a `
   display: flex;
   text-decoration: none;
-  color: white;
+  color: #c2c2c2;
   position: relative;
   &:hover {
-    color: pink
+    color: #ff79be9d
   }
 `;
 

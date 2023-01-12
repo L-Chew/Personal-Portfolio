@@ -1,5 +1,5 @@
 import React from 'react';
-import GlobalFonts from '../fonts/fonts.js';
+import GlobalFonts from '../globalStyles.jsx';
 import styled from 'styled-components';
 import Navigation from './Navigation.jsx';
 import Entry from './Entry.jsx';
@@ -16,8 +16,6 @@ const App = () => {
   return (
     <AppGrid>
       <GlobalFonts/>
-      <h1>Lorene Chew</h1>
-      <h2>Lorene Chew</h2>
       <Navigation/>
       <Entry/>
       <Projects/>
