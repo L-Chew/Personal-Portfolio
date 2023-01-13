@@ -2,13 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.div`
-  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
   font-family: GambarinoRegular;
-  font-size: 10px;
-  margin-top: 5rem;
+  font-size: 15px;
+  margin: 5rem 0 1.5rem 0;
+  color:  #ff79be9d;
 `;
 
 const IconsContainer = styled.div `
@@ -20,18 +23,23 @@ const IconsContainer = styled.div `
   padding: 0.5rem 0;
 `;
 
+const Content = styled.div`
+  color:  #ff79be9d;
+
+`;
+
 const Footer = () => {
 
 
   return (
     <FooterContainer>
-      <div> This website is powered by: </div>
+      <Content> This website is powered by: </Content>
       <IconsContainer>
         <div>React</div>
         <div>Babel</div>
         <div>Webpack</div>
       </IconsContainer>
-      <div> © 2023 Lorene Chew. All rights reserved. </div>
+      <Content> © 2023 Lorene Chew. All rights reserved. </Content>
     </FooterContainer>
 
 

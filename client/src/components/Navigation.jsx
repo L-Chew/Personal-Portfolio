@@ -1,50 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const GridLayout = styled.div `
   display: grid;
   grid-template-columns: repeat(auto, 1fr);
   grid-template-areas:
-    /* 'blank blank Container' */
-    /* 'Icon blank OrderedList' */
-    'i .  navi';
+    'logo .  navi';
   border-style: none;
+  margin-bottom: 100px;
 `;
 
-// const Container = styled.div `
-//   grid-area: Container;
-//   display: flex;
-//   justify-content: space-between;
-// `;
-
-// const NaviContent = styled.div `
-//   display: flex;
-// `;
-
-// const Button = styled.button `
-//   background: none;
-//   color: inherit;
-//   border: none;
-//   padding: 0 1rem;
-//   font-style: inherit;
-//   &:hover {
-//     color: pink;
-//   }
-// `;
-
-// const Numbers = styled.div `
-//   color: pink;
-// `;
-
-const Icon = styled.div `
+const Logo = styled(Link) `
   font-family: 'Beautica';
-  grid-area: i;
+  grid-area: logo;
   display: flex;
   justify-content: left;
   align-items: center;
   color: #ff79be9d;
   font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+
 `;
+
 
 const OrderedList = styled.ol `
   grid-area: navi;
@@ -59,11 +38,11 @@ const ListItem = styled.li `
   padding-right: 0.5rem;
 `;
 
-const Link = styled.a `
-  display: flex;
+const StyledLink = styled(Link) `
+  /* display: flex; */
   text-decoration: none;
   color: #c2c2c2;
-  position: relative;
+  /* position: relative; */
   &:hover {
     color: #ff79be9d
   }
@@ -72,58 +51,33 @@ const Link = styled.a `
 const Navigation = () => {
   return (
     <GridLayout>
-      <Icon>
-        LC
-      </Icon>
+      <Logo to='/'>
+          LC
+      </Logo>
       <OrderedList>
         <ListItem>
-          <Link href='/#About'>
+          <StyledLink to='/about'>
             About
-          </Link>
+          </StyledLink>
         </ListItem>
         <ListItem>
-          <Link href='/#Experience'>
+          <StyledLink to='/experience'>
             Experience
-          </Link>
+          </StyledLink>
         </ListItem>
         <ListItem>
-          <Link href='/#Projects'>
+          <StyledLink to='/projects'>
             Projects
-          </Link>
+          </StyledLink>
         </ListItem>
         <ListItem>
-          <Link href='/#Contact'>
+          <StyledLink to='/contact'>
             Contact
-          </Link>
+          </StyledLink>
         </ListItem>
       </OrderedList>
-
     </GridLayout>
   )
 }
 
 export default Navigation;
-
-
-
-
-/*
-  <Container>
-    <NaviContent>
-      <Numbers>1. </Numbers>
-      <Button>About</Button>
-    </NaviContent>
-    <NaviContent>
-      <Numbers>2. </Numbers>
-      <Button>Experience</Button>
-    </NaviContent>
-    <NaviContent>
-      <Numbers>3. </Numbers>
-      <Button>Projects</Button>
-    </NaviContent>
-    <NaviContent>
-      <Numbers>4. </Numbers>
-      <Button>Contact</Button>
-    </NaviContent>
-  </Container>
-  */

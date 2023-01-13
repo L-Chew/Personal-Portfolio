@@ -1,3 +1,4 @@
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 var path = require('path');
 var SRC_DIR = path.join(__dirname, '/client/src');
 var DIST_DIR = path.join(__dirname, '/client/dist');
@@ -10,6 +11,14 @@ module.exports = {
     path: DIST_DIR,
   },
   devtool: 'source-map',
+  watch: true,
+  plugins: [
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 8800,
+      server: { baseDir: ['client/dist'] }
+    })
+  ],
   module: {
     rules: [
       {

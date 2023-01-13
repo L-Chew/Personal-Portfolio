@@ -28,6 +28,9 @@ const GlobalFonts = createGlobalStyle`
         color:#fbcde59d;
     }
 
+    .text {
+        font-size: 25px;
+    }
     .sections {
         display: flex;
         flex-direction: row;

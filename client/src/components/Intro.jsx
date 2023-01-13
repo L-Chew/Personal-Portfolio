@@ -5,7 +5,7 @@ const IntroContainer = styled.div `
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 100px 0;
+  /* margin: 100px 0; */
 `;
 
 const Opening = styled.div `
@@ -27,10 +27,10 @@ const Slogan = styled.div `
 const Intro = () => {
   return (
     <IntroContainer>
-      <Opening> Hi, my name is </Opening>
+      <Opening className='text'> Hi, my name is </Opening>
       <Name> Lorene Chew </Name>
       <Slogan> Simplicity is a good thing </Slogan>
-      <div> I'm a software engineer who likes to focus on design, aesthetics, and efficiency. </div>
+      <div className='text'> I'm a software engineer who likes to focus on design, aesthetics, and efficiency. </div>
     </IntroContainer>
   )
 }
