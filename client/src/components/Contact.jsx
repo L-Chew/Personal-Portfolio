@@ -6,13 +6,21 @@ import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from '../
 const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
+  /* background-color: #fbcde59d; */
   /* color: #c2c2c2; */
+`;
+
+const Label =styled.label`
+  font-family: 'Gambarino Regular';
+  font-size: 20px;
+  letter-spacing: 0.1em;
 `;
 
 const SubmitButton = styled.input`
   background-color: #ff79be9d;
   color: #c2c2c2;
   font-family: 'Gambarino-Regular';
+  font-size: 15px;
   letter-spacing: 0.1em;
 `;
 
@@ -39,12 +47,12 @@ const Contact = () => {
       </div>
       {/*Consider wrapping form in a grid to format fields and potentially an image */}
       <ContactForm ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input type='text' name='user_name' />
-        <label>Email</label>
-        <input type='email' name='user_email' />
-        <label>Message</label>
-        <textarea name='message' />
+        <Label>Name</Label>
+        <input className='inputs' type='text' name='user_name' />
+        <Label>Email</Label>
+        <input className='inputs' type='email' name='user_email' />
+        <Label>Message</Label>
+        <textarea className='inputs' name='message' />
         <SubmitButton type='submit' value='Send' />
       </ContactForm>
     </>

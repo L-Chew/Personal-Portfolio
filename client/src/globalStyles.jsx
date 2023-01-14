@@ -34,6 +34,7 @@ const GlobalStyles = createGlobalStyle`
         color:#fbcde59d;
     }
 
+    //About
     .text {
         font-size: 25px;
     }
@@ -51,7 +52,13 @@ const GlobalStyles = createGlobalStyle`
         color: #ff79be9d;
         padding-right: 0.5rem;
         font-size: 40px;
+    }
 
+    //Contact
+    .inputs {
+        background-color: #c2c2c2;
+        font-family: 'Gambarino Regular';
+        font-size: 20px;
     }
 `;
 
