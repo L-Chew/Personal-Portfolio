@@ -40,15 +40,19 @@ const GlobalStyles = createGlobalStyle`
     .sections {
         display: flex;
         flex-direction: row;
-        font-size: 25px;
+        align-items: center;
+        font-size: 80px;
         color: #c2c2c2;
         grid-area: cont;
+        font-family: Beautica;
+        letter-spacing: 0.5rem;
     }
     .sectionNums {
         color: #ff79be9d;
         padding-right: 0.5rem;
-    }
+        font-size: 40px;
 
+    }
 `;
 
 export default GlobalStyles;
