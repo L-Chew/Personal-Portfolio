@@ -5,7 +5,6 @@ const IntroContainer = styled.div `
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /* margin: 100px 0; */
 `;
 
 const Opening = styled.div `

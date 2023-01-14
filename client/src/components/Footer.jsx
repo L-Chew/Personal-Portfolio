@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.div`
-  min-width: 100vw;
-  min-height: 100vh;
+  grid-area: foot;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,12 +24,9 @@ const IconsContainer = styled.div `
 
 const Content = styled.div`
   color:  #ff79be9d;
-
 `;
 
 const Footer = () => {
-
-
   return (
     <FooterContainer>
       <Content> This website is powered by: </Content>
@@ -41,8 +37,6 @@ const Footer = () => {
       </IconsContainer>
       <Content> © 2023 Lorene Chew. All rights reserved. </Content>
     </FooterContainer>
-
-
   )
 }
 

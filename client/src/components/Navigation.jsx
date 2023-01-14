@@ -4,11 +4,12 @@ import styled from 'styled-components';
 
 const GridLayout = styled.div `
   display: grid;
+  grid-area: head;
   grid-template-columns: repeat(auto, 1fr);
   grid-template-areas:
     'logo .  navi';
   border-style: none;
-  margin-bottom: 100px;
+  margin: 1.5rem 0 100px 0;
 `;
 
 const Logo = styled(Link) `
@@ -16,33 +17,27 @@ const Logo = styled(Link) `
   grid-area: logo;
   display: flex;
   justify-content: left;
-  align-items: center;
   color: #ff79be9d;
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
-
 `;
-
 
 const OrderedList = styled.ol `
   grid-area: navi;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin: 0;
 `;
 
 const ListItem = styled.li `
-  /* display: list-item; */
   color: #ff79be9d;
   padding-right: 0.5rem;
 `;
 
 const StyledLink = styled(Link) `
-  /* display: flex; */
   text-decoration: none;
   color: #c2c2c2;
-  /* position: relative; */
   &:hover {
     color: #ff79be9d
   }
