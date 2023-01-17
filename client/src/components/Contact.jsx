@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from '../../../config.js';
@@ -26,6 +26,8 @@ const SubmitButton = styled.input`
 
 const Contact = () => {
   const form = useRef();
+  // this wouldnt work because if error, we'd still like a popup error message; rethink
+  // const {successfulSubmit, setSuccessfulSubmit} = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();

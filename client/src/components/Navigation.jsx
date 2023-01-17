@@ -5,18 +5,24 @@ import styled from 'styled-components';
 const GridLayout = styled.div `
   display: grid;
   grid-area: head;
-  grid-template-columns: repeat(auto, 1fr);
+  /* grid-template-columns: repeat(auto, 1fr); */
   grid-template-areas:
     'logo .  navi';
   border-style: none;
   margin: 1.5rem 0 100px 0;
+  align-items: center;
+  height: 0;
+`;
+
+const LogoContainer = styled.div `
+  grid-area: logo;
+  /* display: flex; */
+  /* justify-content: left; */
+
 `;
 
 const Logo = styled(Link) `
   font-family: 'Beautica';
-  grid-area: logo;
-  display: flex;
-  justify-content: left;
   color: #ff79be9d;
   font-size: 30px;
   font-weight: bold;
@@ -46,9 +52,11 @@ const StyledLink = styled(Link) `
 const Navigation = () => {
   return (
     <GridLayout>
-      <Logo to='/'>
+      <LogoContainer>
+        <Logo to='/'>
           LC
-      </Logo>
+        </Logo>
+      </LogoContainer>
       <OrderedList>
         <ListItem>
           <StyledLink to='/about'>
