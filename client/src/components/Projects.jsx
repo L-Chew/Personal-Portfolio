@@ -12,6 +12,11 @@ import Pupper from '../../images/pupper.png';
 //   desktop: '2560px'
 // }
 
+const ContentGrid = styled.div`
+  grid-area: proj;
+`;
+
+
 const ProjectContent = styled.div`
   display: grid;
   grid-gap: 10px;
@@ -59,7 +64,7 @@ const Description = styled.div`
 
 const Projects = () => {
   return (
-    <>
+    <ContentGrid>
       <div className='sections'>
         <div className='sectionNums'> .03 </div>
         Things I've Created
@@ -76,7 +81,7 @@ const Projects = () => {
         <Picture> <source srcSet='https://media.licdn.com/dms/image/sync/C5627AQGxK6Xhpa-RDg/articleshare-shrink_800/0/1675670454875?e=1676494800&v=beta&t=TA3PyUcMLmMBbjFb_o1OBCPEtXeWZ2b6ZC3VqsH0NXo'/> <img src='https://media.licdn.com/dms/image/sync/C5627AQGxK6Xhpa-RDg/articleshare-shrink_800/0/1675670454875?e=1676494800&v=beta&t=TA3PyUcMLmMBbjFb_o1OBCPEtXeWZ2b6ZC3VqsH0NXo'/> </Picture>
         <Description>Atelier Description</Description>
       </ProjectContent>
-    </>
+    </ContentGrid>
   )
 }
 

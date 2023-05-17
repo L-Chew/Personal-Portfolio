@@ -2,6 +2,10 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 import Navigation from './Navigation.jsx';
+import About from './About.jsx';
+import Experience from './Experience.jsx';
+import Projects from './Projects.jsx';
+import Contact from './Contact.jsx';
 import Footer from './Footer.jsx';
 
 const ContentGrid = styled.div`
@@ -15,6 +19,9 @@ const LayoutGrid = styled.div `
   grid-template-areas:
     'head head head head head head head head head head head head'
     '... ... cont cont cont cont cont cont cont cont ... ...'
+    '... ... about about about about about about about about ... ...'
+    '... ... exp exp exp exp exp exp exp exp ... ...'
+    '... ... proj proj proj proj proj proj proj proj ... ...'
     'foot foot foot foot foot foot foot foot foot foot foot foot';
 `;
 
@@ -25,6 +32,9 @@ const Layout = () => {
       <ContentGrid>
         <Outlet />
       </ContentGrid>
+      <About />
+      <Experience />
+      <Projects />
       <Footer />
     </LayoutGrid>
   )
