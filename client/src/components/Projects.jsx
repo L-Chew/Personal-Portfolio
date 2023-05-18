@@ -14,6 +14,7 @@ import Pupper from '../../images/pupper.png';
 
 const ContentGrid = styled.div`
   grid-area: proj;
+  margin: 3rem;
 `;
 
 
@@ -74,11 +75,11 @@ const Projects = () => {
         <Description>Pupper Description</Description>
       </ProjectContent>
       <ProjectContent>
-        <Picture> <source srcSet='https://media.licdn.com/dms/image/sync/C5627AQHLpWciB1wolw/articleshare-shrink_800/0/1674930806098?e=1676494800&v=beta&t=RPccx1mRuMrqoEd-EltFHnj2l6geNaH_C_asng4cL6Y'/> <img src='https://media.licdn.com/dms/image/sync/C5627AQHLpWciB1wolw/articleshare-shrink_800/0/1674930806098?e=1676494800&v=beta&t=RPccx1mRuMrqoEd-EltFHnj2l6geNaH_C_asng4cL6Y'/> </Picture>
+        <Picture> <source srcSet='http://via.placeholder.com/640x360'/> <img src='http://via.placeholder.com/640x360'/> </Picture>
         <Description>Catwalk Description</Description>
       </ProjectContent>
       <ProjectContent>
-        <Picture> <source srcSet='https://media.licdn.com/dms/image/sync/C5627AQGxK6Xhpa-RDg/articleshare-shrink_800/0/1675670454875?e=1676494800&v=beta&t=TA3PyUcMLmMBbjFb_o1OBCPEtXeWZ2b6ZC3VqsH0NXo'/> <img src='https://media.licdn.com/dms/image/sync/C5627AQGxK6Xhpa-RDg/articleshare-shrink_800/0/1675670454875?e=1676494800&v=beta&t=TA3PyUcMLmMBbjFb_o1OBCPEtXeWZ2b6ZC3VqsH0NXo'/> </Picture>
+        <Picture> <source srcSet='http://via.placeholder.com/640x360'/> <img src='http://via.placeholder.com/640x360'/> </Picture>
         <Description>Atelier Description</Description>
       </ProjectContent>
     </ContentGrid>
