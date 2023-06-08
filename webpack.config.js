@@ -1,17 +1,21 @@
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
-var path = require('path');
-var SRC_DIR = path.join(__dirname, '/client/src');
-var DIST_DIR = path.join(__dirname, '/client/dist');
+const path = require('path');
+const SRC_DIR = path.join(__dirname, '/client/src');
+const DIST_DIR = path.join(__dirname, '/client/dist');
+// const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  // mode: 'development',
   entry: [`${SRC_DIR}/index.js`],
   output: {
     filename: 'bundle.js',
     path: DIST_DIR,
   },
-  devtool: 'source-map',
-  watch: true,
+  devServer: {
+    static: DIST_DIR,
+    port: 9000,
+  },
+  // devtool: 'source-map',
+  // watch: true,
   // plugins: [
   //   new BrowserSyncPlugin({
   //     host: 'localhost',
@@ -29,7 +33,7 @@ module.exports = {
           options: {
             presets: [
               "@babel/preset-env",
-              "@babel/preset-react"
+              ["@babel/preset-react", {"runtime": "automatic"}]
             ],
             plugins: [
               ["@babel/plugin-transform-runtime",
