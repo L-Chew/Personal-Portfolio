@@ -4,7 +4,7 @@ const DIST_DIR = path.join(__dirname, '/client/dist');
 // const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
-  // mode: 'development',
+  mode: 'development',
   entry: [`${SRC_DIR}/index.js`],
   output: {
     filename: 'bundle.js',

@@ -63,9 +63,9 @@ const Description = styled.div`
 `;
 
 
-const Projects = () => {
+const Projects = ({ projectsRef }) => {
   return (
-    <ContentGrid>
+    <ContentGrid ref={projectsRef}>
       <div className='sections'>
         <div className='sectionNums'> .03 </div>
         Things I've Created

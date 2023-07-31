@@ -22,20 +22,23 @@ const LayoutGrid = styled.div `
     '... ... about about about about about about about about ... ...'
     '... ... exp exp exp exp exp exp exp exp ... ...'
     '... ... proj proj proj proj proj proj proj proj ... ...'
+    '... ... contact contact contact contact contact contact contact contact ... ...'
     'foot foot foot foot foot foot foot foot foot foot foot foot';
 `;
 
 const Layout = () => {
+  
   return (
     <LayoutGrid>
       <Navigation />
       <ContentGrid>
         <Outlet />
       </ContentGrid>
-      <About />
+      {/* <About />
       <Experience />
       <Projects />
-      <Footer />
+      <Contact />
+      <Footer /> */}
     </LayoutGrid>
   )
 }

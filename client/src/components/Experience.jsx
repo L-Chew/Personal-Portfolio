@@ -27,7 +27,7 @@ const Text = styled.div `
   flex-direaction: column;
 `
 
-const Experience = () => {
+const Experience = ({ experienceRef }) => {
 
   const [company, setCompany] = useState('salesforce');
 
@@ -36,7 +36,7 @@ const Experience = () => {
   }
 
   return (
-    <SectionGrid>
+    <SectionGrid ref={experienceRef}>
       <div className='sections'>
         <div className='sectionNums'> .02 </div>
         Where I've Worked

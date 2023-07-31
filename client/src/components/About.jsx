@@ -17,9 +17,9 @@ const ContentContainer = styled.div `
   flext-direction: row;
 `
 
-const About = () => {
+const About = ({ aboutRef }) => {
   return (
-    <SectionGrid>
+    <SectionGrid ref={aboutRef}>
       <SectionContainer>
         <div className='sections'>
           <div className='sectionNums'> .01 </div>

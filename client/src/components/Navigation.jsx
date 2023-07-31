@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -18,7 +18,6 @@ const LogoContainer = styled.div `
   grid-area: logo;
   /* display: flex; */
   /* justify-content: left; */
-
 `;
 
 const Logo = styled(Link) `
@@ -50,6 +49,16 @@ const StyledLink = styled(Link) `
 `;
 
 const Navigation = () => {
+  const [navi, setNavi] = useState('intro');
+
+  const handleOnClick = (e) => {
+    e.preventDefault();
+
+    setNavi(e.target.value);
+    console.log(`value: `, e.target.value)
+    console.log(`navi: `, navi);
+
+  }
   return (
     <GridLayout>
       <LogoContainer>
@@ -58,13 +67,13 @@ const Navigation = () => {
         </Logo>
       </LogoContainer>
       <OrderedList>
-        <ListItem>
+        <ListItem onClick={handleOnClick} value='about'>
           <StyledLink to='/about'>
             About
           </StyledLink>
         </ListItem>
         <ListItem>
-          <StyledLink to='/experience'>
+          <StyledLink to='experience'>
             Experience
           </StyledLink>
         </ListItem>

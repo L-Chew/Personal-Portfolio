@@ -3,6 +3,17 @@ import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from '../../../config.js';
 
+const SectionGrid = styled.div`
+  grid-area: contact;
+  margin: 3rem;
+`;
+
+const SectionContainer = styled.div `
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+
 const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
@@ -27,7 +38,7 @@ const SubmitButton = styled.input`
 const Contact = () => {
   const form = useRef();
   // this wouldnt work because if error, we'd still like a popup error message; rethink
-  // const {successfulSubmit, setSuccessfulSubmit} = useState(false);
+  // const [successfulSubmit, setSuccessfulSubmit] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -42,22 +53,24 @@ const Contact = () => {
   };
 
   return (
-    <>
-      <div className='sections'>
-        <div className='sectionNums'> .04 </div>
-        Get In Touch
-      </div>
-      {/*Consider wrapping form in a grid to format fields and potentially an image */}
-      <ContactForm ref={form} onSubmit={sendEmail}>
-        <Label>Name</Label>
-        <input className='inputs' type='text' name='user_name' />
-        <Label>Email</Label>
-        <input className='inputs' type='email' name='user_email' />
-        <Label>Message</Label>
-        <textarea className='inputs' name='message' />
-        <SubmitButton type='submit' value='Send' />
-      </ContactForm>
-    </>
+    <SectionGrid>
+      <SectionContainer>
+        <div className='sections'>
+          <div className='sectionNums'> .04 </div>
+          Get In Touch
+        </div>
+        {/*Consider wrapping form in a grid to format fields and potentially an image */}
+        <ContactForm ref={form} onSubmit={sendEmail}>
+          <Label>Name</Label>
+          <input className='inputs' type='text' name='user_name' />
+          <Label>Email</Label>
+          <input className='inputs' type='email' name='user_email' />
+          <Label>Message</Label>
+          <textarea className='inputs' name='message' />
+          <SubmitButton type='submit' value='Send' />
+        </ContactForm>
+      </SectionContainer>
+    </SectionGrid>
   )
 }
 
