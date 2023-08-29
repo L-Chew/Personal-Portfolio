@@ -47,7 +47,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|otf|ico)$/,
