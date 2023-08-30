@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'roboto': ['Roboto']
+        'Roboto': ['Roboto'],
+        'Inter': ['Inter']
       }
     },
   },
