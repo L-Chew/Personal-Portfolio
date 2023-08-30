@@ -4,15 +4,14 @@ const Hero = () => {
   return (
     <div className='w-screen min-h-screen'>
       <div className='grid grid-cols-12 gap-1 grid-rows-6'>
-        <div className='col-start-2 col-span-6 row-start-3'>
-          <div className='text-[60px]'>
+        <div className='col-start-2 col-span-6 row-start-3 space-y-4'>
+          <div className='text-6xl'>
             Hello, I'm <span className='text-[#5EEAD4]'>Lorene Chew</span>.
           </div>
-          <div className='text-[45px]'>
+          <div className='text-4xl'>
             I am a full-stack web developer.
           </div>
-          <br></br>
-          <button className='rounded bg-[#3B4560] h-[2.5rem] w-[10rem]'>
+          <button className='rounded bg-[#3B4560] h-10 w-32'>
             {`Learn More ->`}
           </button>
         </div>
