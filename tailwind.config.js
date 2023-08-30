@@ -4,7 +4,11 @@ module.exports = {
     "./client/src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'roboto': ['Roboto']
+      }
+    },
   },
   plugins: [],
 }
