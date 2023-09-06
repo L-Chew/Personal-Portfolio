@@ -3,7 +3,7 @@ import React from 'react';
 const Hero = () => {
   return (
     <div className='w-screen min-h-screen'>
-      <div className='grid grid-cols-12 gap-1 grid-rows-6'>
+      <div className='grid grid-cols-12 gap-1 grid-rows-5'>
         <div className='col-start-2 col-span-6 row-start-3 space-y-4'>
           <div className='text-6xl'>
             Hello, I'm <span className='text-[#5EEAD4]'>Lorene Chew</span>.
@@ -16,7 +16,7 @@ const Hero = () => {
           </button>
         </div>
         <div className='row-span-6 col-end-13 col-span-5'>
-          <div className='grid grid-cols-5 grid-rows-5'>
+          <div className='grid grid-cols-5 grid-rows-4'>
             <div className='col-start-1 col-span-3 row-start-2 row-span-2 z-10'>
               <div className='h-[45vh] bg-[#5EEAD4] bg-opacity-90'></div>
             </div>
@@ -26,6 +26,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <div className='h-1 bg-[#5EEAD4] mb-10 mx-20'></div>
     </div>
   )
 }
