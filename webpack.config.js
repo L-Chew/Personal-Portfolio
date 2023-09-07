@@ -14,15 +14,6 @@ module.exports = {
     static: DIST_DIR,
     port: 9000,
   },
-  // devtool: 'source-map',
-  // watch: true,
-  // plugins: [
-  //   new BrowserSyncPlugin({
-  //     host: 'localhost',
-  //     port: 8888,
-  //     server: { baseDir: ['client/dist'] }
-  //   })
-  // ],
   module: {
     rules: [
       {
