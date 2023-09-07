@@ -18,7 +18,7 @@ const Experience = () => {
       'role': 'Back End Developer',
       'application': 'Atelier API',
       'description': 'A microservice architecture RESTful API; replace existing monoliithic application',
-      'techStack': ['React', 'Javascript', 'SQL']
+      'techStack': ['React', 'Javascript', 'SQL', 'Material UI']
     },
     {
       'key': 3,
@@ -27,7 +27,7 @@ const Experience = () => {
       'role': 'Front End Developer',
       'application': 'Catwalk',
       'description': 'A user interface for the Q&A widget of an e-commerce web application',
-      'techStack': ['React', 'Javascript', 'POSTgres SQL', 'CSS']
+      'techStack': ['React', 'Javascript', 'POSTgresSQL', 'CSS']
     },
     {
       'key': 4,
@@ -42,7 +42,9 @@ const Experience = () => {
 
   return (
     <div>
-      <div className='flex my-12 text-3xl text-[#2DD4BE]'>Experience</div>
+      <div classNmae='sticky top-0'>
+        <h2 className='flex my-12 text-2xl text-[#2DD4BE] font-semibold uppercase'>Experience</h2>
+      </div>
       <div>
         <ol>
           {experiences.map(experience => (
@@ -52,7 +54,7 @@ const Experience = () => {
                 {experience.year}
               </div>
               <div className='col-start-4 col-span-9'>
-                <h3 className='leading-snug text-xl'>
+                <h3 className='text-xl font-semibold'>
                   <div>
                     <span>
                     {experience.role} ·
@@ -70,7 +72,7 @@ const Experience = () => {
                   {experience.description}
                 </p>
                 <div>
-                  <ul className='flex mt-2 flex flex-wrap'>
+                  <ul className='flex flex-wrap mt-2'>
                     {experience.techStack ? (experience.techStack).map(techStack => (
                       <li key={techStack} className='mr-1.5 mt-2'>
                         <div className='flex items-center rounded-full bg-[#2DD4BE] bg-opacity-10 px-3 py-1 text-[#2DD4BE]'>
@@ -85,6 +87,9 @@ const Experience = () => {
           </li>
           ))}
         </ol>
+        <div className='mt-12'>
+          <a className='in-line-flex items-center font-semibold text-xl' href='/resume.pdf'>View Full Résumé</a>
+        </div>
       </div>
     </div>
   )
