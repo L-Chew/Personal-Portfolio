@@ -14,15 +14,6 @@ module.exports = {
     static: DIST_DIR,
     port: 9000,
   },
-  // devtool: 'source-map',
-  // watch: true,
-  // plugins: [
-  //   new BrowserSyncPlugin({
-  //     host: 'localhost',
-  //     port: 8888,
-  //     server: { baseDir: ['client/dist'] }
-  //   })
-  // ],
   module: {
     rules: [
       {
@@ -47,7 +38,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|otf|ico)$/,
