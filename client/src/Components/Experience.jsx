@@ -48,13 +48,13 @@ const Experience = () => {
       <div>
         <ol>
           {experiences.map(experience => (
-            <li key={experience.key} className='mb-10'>
-            <div className='grid grid-cols-8'>
+          <li key={experience.key} className='group mb-10'>
+            <div className='grid grid-cols-8 group-hover:bg-[#495678] group-hover:bg-opacity-20 group-hover:rounded-md'>
               <div className='col-start-1 col-span-3 text-[#495678] text-lg'>
                 {experience.year}
               </div>
               <div className='col-start-4 col-span-9'>
-                <h3 className='text-xl font-semibold'>
+                <h3 className='text-xl font-semibold group-hover:text-[#2DD4BE]'>
                   <div>
                     <span>
                     {experience.role} ·
