@@ -1,7 +1,6 @@
 const path = require('path');
 const SRC_DIR = path.join(__dirname, '/client/src');
 const DIST_DIR = path.join(__dirname, '/client/dist');
-// const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -13,6 +12,7 @@ module.exports = {
   devServer: {
     static: DIST_DIR,
     port: 9000,
+    historyApiFallback: true,
   },
   module: {
     rules: [
