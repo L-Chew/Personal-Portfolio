@@ -1,13 +1,15 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import About from './About.jsx';
 import Experience from './Experience.jsx';
 import Projects from './Projects.jsx';
 
 const Content = () => {
-  const myScrollRef = useRef(null);
+
+  // const [textColor, setClickedTextColor] = useState('#CBD5E1');
 
   const handleClick = (e) => {
+    // setClickedTextColor((textColor) => (textColor === '#2DD4BE' ? '#CBD5E1' : '#2DD4BE'))
     document.getElementById(`${e.target.value}`).scrollIntoView({block: 'end', behavior: 'smooth'});
   }
 
