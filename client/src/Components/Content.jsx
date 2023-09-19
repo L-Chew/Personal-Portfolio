@@ -18,10 +18,8 @@ const Content = () => {
 
   return (
     <div className='ml-20 mr-20'>
+      <NavLink to='/' className='fixed w-screen mt-10 text-3xl text-[#2DD4BE]'> LC </NavLink>
       <div className='grid grid-cols-8'>
-        <div className='col-start-1 col-span-1'>
-          <NavLink to='/' className='fixed mt-10 text-3xl text-[#2DD4BE]'> LC </NavLink>
-        </div>
         <div className='col-start-2 col-span-2'>
           <div className='fixed flex flex-col h-screen justify-center pl-20 text-xl'>
             <button onClick={handleClick} value='about'> About </button>
