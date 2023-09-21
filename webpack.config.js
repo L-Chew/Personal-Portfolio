@@ -17,7 +17,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)?/,
+        test: /\.(pdf|js|jsx|png)?/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
