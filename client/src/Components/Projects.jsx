@@ -38,7 +38,7 @@ const Projects = () => {
       <div>
         <ol>
           {projects.map(project => (
-            <li key={project.ket} className='group mb-10'>
+            <li key={project.key} className='group mb-10'>
               <div className='grid grid-cols-8 group-hover:bg-[#495678] group-hover:bg-opacity-20 group-hover:rounded-md'>
                 <div className='col-start-1 col-span-2'>
                   <img src={project.img}/>
