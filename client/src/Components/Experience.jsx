@@ -8,7 +8,7 @@ const Experience = () => {
       'company': 'Software Engineering Application',
       'role': 'Full Stack Developer',
       'application': 'Pupper',
-      'description': 'A web application where puppies match and coordinate playdates via chat',
+      'description': 'Collaborated with other engineers to create a web application for dog lovers expand their network and meet other doggie friends.',
       'techStack': ['React', 'Javascript', 'MongoDB']
     },
     {
@@ -17,7 +17,7 @@ const Experience = () => {
       'company': 'Software Engineering Application',
       'role': 'Back End Developer',
       'application': 'Atelier API',
-      'description': 'A microservice architecture RESTful API; replace existing monoliithic application',
+      'description': 'Re-built an existing PAI service using Node and Express to optimize the performance, and locally stress-tested the service with K6. ',
       'techStack': ['React', 'Javascript', 'SQL', 'Material UI']
     },
     {
@@ -26,7 +26,7 @@ const Experience = () => {
       'company': 'Software Engineering Application',
       'role': 'Front End Developer',
       'application': 'Catwalk',
-      'description': 'A user interface for the Q&A widget of an e-commerce web application',
+      'description': '',
       'techStack': ['React', 'Javascript', 'POSTgresSQL', 'CSS']
     },
     {
@@ -41,21 +41,21 @@ const Experience = () => {
   ]
 
   return (
-    <div>
-      <div className='sticky top-0'>
+    <div id='experience'>
+      <div>
         <h2 className='flex my-12 text-2xl text-[#2DD4BE] font-semibold uppercase'>Experience</h2>
       </div>
       <div>
         <ol>
           {experiences.map(experience => (
-            <li key={experience.key} className='mb-10'>
-            <div className='grid grid-cols-8'>
+          <li key={experience.key} className='group mb-10'>
+            <div className='grid grid-cols-8 group-hover:bg-[#495678] group-hover:bg-opacity-20 group-hover:rounded-md'>
               <div className='col-start-1 col-span-3 text-[#495678] text-lg'>
                 {experience.year}
               </div>
               <div className='col-start-4 col-span-9'>
-                <h3 className='text-xl font-semibold'>
-                  <div>
+                <h3 className='text-xl font-semibold group-hover:text-[#2DD4BE]'>
+                  <div className='mb-5'>
                     <span>
                     {experience.role} ·
                     {' '}
@@ -65,9 +65,6 @@ const Experience = () => {
                     </span>
                   </div>
                 </h3>
-                <span className='text-lg'>
-                  {experience.application === null ? 'none' : experience.application}
-                </span>
                 <p className='text-[#495678] text-lg'>
                   {experience.description}
                 </p>
@@ -88,7 +85,7 @@ const Experience = () => {
           ))}
         </ol>
         <div className='mt-12'>
-          <a className='in-line-flex items-center font-semibold text-xl' href='/resume.pdf'>View Full Résumé</a>
+          <a className='in-line-flex items-center font-semibold text-xl' href='/resume.pdf' target='_blank' rel='noopener noreferrer'>View Full Résumé</a>
         </div>
       </div>
     </div>
