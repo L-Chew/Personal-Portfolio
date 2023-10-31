@@ -85,7 +85,7 @@ const Experience = () => {
           ))}
         </ol>
         <div className='mt-12'>
-          <a className='in-line-flex items-center font-semibold text-xl' href='../resume.pdf'>View Full Résumé</a>
+          <a className='in-line-flex items-center font-semibold text-xl' href='/resume.pdf' target='_blank' rel='noopener noreferrer'>View Full Résumé</a>
         </div>
       </div>
     </div>
