@@ -5,11 +5,11 @@ import profilePic from '../Images/profilePic.jpeg';
 const Hero = () => {
 
   return (
-    <div className='w-screen h-screen'>
+    <div className='w-screen h-screen bg-gradient-to-r from-[#0f172a] to-[#efd4e7]'>
       <div className='grid grid-cols-12 gap-1 grid-rows-5'>
         <div className='col-start-2 col-span-6 row-start-3 space-y-4'>
           <div className='text-6xl'>
-            Hello, I'm <span className='text-[#2DD4BE]'>Lorene Chew</span>.
+            Hello, I'm <span className='text-[#fac1e9]'>Lorene Chew</span>.
           </div>
           <div className='text-4xl'>
             I am a full-stack web developer.
@@ -25,7 +25,7 @@ const Hero = () => {
                 {/* Display the profile pic */}
                 <img src={profilePic} alt='profile pic' className="object-cover w-full h-full" />
                 {/* Overlay the background color on top of the profilePic */}
-                <div className="absolute inset-0 h-[45vh] bg-[#2DD4BE] bg-opacity-25"></div>
+                <div className="absolute inset-0 h-[45vh] bg-[#fac1e9] bg-opacity-25"></div>
               </div>
             </div>
             <div className='col-start-3 col-span-3 row-start-1 row-span-4'>
@@ -34,9 +34,10 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className='h-1 bg-[#2DD4BE] mb-10 mx-20'></div>
     </div>
   )
 }
 
 export default Hero;
+
+//#2DD4BE

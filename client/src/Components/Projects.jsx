@@ -33,7 +33,7 @@ const Projects = () => {
   return (
     <div id='projects'>
       <div>
-        <h2 className='flex my-12 text-2xl text-[#2DD4BE] font-semibold uppercase'>Projects</h2>
+        <h2 className='flex my-12 text-3xl text-[#fac1e9] font-semibold uppercase'>Projects</h2>
       </div>
       <div>
         <ol>
@@ -44,13 +44,13 @@ const Projects = () => {
                   <img src={project.img}/>
                 </div>
                 <div className='flex items-center col-start-4 col-span-9'>
-                  <div className='flex flex-col group-hover:text-[#2DD4BE]'>
-                    <span className='text-xl font-semibold group-hover:text-[#2DD4BE]'>
+                  <div className='flex flex-col group-hover:text-[#fac1e9]'>
+                    <span className='text-2xl font-semibold group-hover:text-[#fac1e9]'>
                       <a href={project.link}>
                         {project.application}
                       </a>
                     </span>
-                    <span className='text-[#495678] text-lg'>
+                    <span className='text-[#495678] text-xl'>
                       {project.description}
                     </span>
                   </div>

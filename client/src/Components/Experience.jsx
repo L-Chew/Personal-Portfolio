@@ -43,18 +43,18 @@ const Experience = () => {
   return (
     <div id='experience'>
       <div>
-        <h2 className='flex my-12 text-2xl text-[#2DD4BE] font-semibold uppercase'>Experience</h2>
+        <h2 className='flex my-12 text-3xl text-[#fac1e9] font-semibold uppercase'>Experience</h2>
       </div>
       <div>
         <ol>
           {experiences.map(experience => (
           <li key={experience.key} className='group mb-10'>
             <div className='grid grid-cols-8 group-hover:bg-[#495678] group-hover:bg-opacity-20 group-hover:rounded-md'>
-              <div className='col-start-1 col-span-3 text-[#495678] text-lg'>
+              <div className='col-start-1 col-span-3 text-[#495678] text-xl'>
                 {experience.year}
               </div>
               <div className='col-start-4 col-span-9'>
-                <h3 className='text-xl font-semibold group-hover:text-[#2DD4BE]'>
+                <h3 className='text-2xl font-semibold group-hover:text-[#fac1e9]'>
                   <div className='mb-5'>
                     <span>
                     {experience.role} ·
@@ -65,14 +65,14 @@ const Experience = () => {
                     </span>
                   </div>
                 </h3>
-                <p className='text-[#495678] text-lg'>
+                <p className='text-[#495678] text-xl'>
                   {experience.description}
                 </p>
                 <div>
                   <ul className='flex flex-wrap mt-2'>
                     {experience.techStack ? (experience.techStack).map(techStack => (
                       <li key={techStack} className='mr-1.5 mt-2'>
-                        <div className='flex items-center rounded-full bg-[#2DD4BE] bg-opacity-10 px-3 py-1 text-[#2DD4BE]'>
+                        <div className='flex items-center rounded-full bg-[#fac1e9] bg-opacity-10 px-3 py-1 text-[#fac1e9]'>
                           {techStack}
                         </div>
                       </li>
@@ -85,7 +85,7 @@ const Experience = () => {
           ))}
         </ol>
         <div className='mt-12'>
-          <a className='in-line-flex items-center font-semibold text-xl' href='/resume.pdf' target='_blank' rel='noopener noreferrer'>View Full Résumé</a>
+          <a className='in-line-flex items-center font-semibold text-2xl' href='/resume.pdf' target='_blank' rel='noopener noreferrer'>View Full Résumé</a>
         </div>
       </div>
     </div>
