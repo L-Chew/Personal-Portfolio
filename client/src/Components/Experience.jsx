@@ -43,18 +43,18 @@ const Experience = () => {
   return (
     <div id='experience'>
       <div>
-        <h2 className='flex my-12 text-3xl text-[#fac1e9] font-semibold uppercase'>Experience</h2>
+        <h2 className='flex my-12 sm:text-xl md:text-xl lg:text-2xl xl:text-3xl text-[#fac1e9] font-semibold uppercase'>Experience</h2>
       </div>
       <div>
         <ol>
           {experiences.map(experience => (
           <li key={experience.key} className='group mb-10'>
             <div className='grid grid-cols-8 group-hover:bg-[#495678] group-hover:bg-opacity-20 group-hover:rounded-md'>
-              <div className='col-start-1 col-span-3 text-[#495678] text-xl'>
+              <div className='col-start-1 col-span-3 text-[#495678] sm:text-sm md:text-md lg:text-lg xl:text-xl'>
                 {experience.year}
               </div>
               <div className='col-start-4 col-span-9'>
-                <h3 className='text-2xl font-semibold group-hover:text-[#fac1e9]'>
+                <h3 className='sm:text-md md:text-lg lg:text-xl xl:text-2xl font-semibold group-hover:text-[#fac1e9]'>
                   <div className='mb-5'>
                     <span>
                     {experience.role} ·
@@ -65,7 +65,7 @@ const Experience = () => {
                     </span>
                   </div>
                 </h3>
-                <p className='text-[#495678] text-xl'>
+                <p className='text-[#495678] sm:text-sm md:text-md lg:text-lg xl:text-xl'>
                   {experience.description}
                 </p>
                 <div>
@@ -85,7 +85,7 @@ const Experience = () => {
           ))}
         </ol>
         <div className='mt-12'>
-          <a className='in-line-flex items-center font-semibold text-2xl' href='/resume.pdf' target='_blank' rel='noopener noreferrer'>View Full Résumé</a>
+          <a className='in-line-flex items-center font-semibold sm:text-md md:text-lg lg:text-xl xl:text-2xl' href='/resume.pdf' target='_blank' rel='noopener noreferrer'>View Full Résumé</a>
         </div>
       </div>
     </div>
