@@ -17,7 +17,7 @@ const Experience = () => {
       'company': 'Software Engineering Application',
       'role': 'Back End Developer',
       'application': 'Atelier API',
-      'description': 'Re-built an existing PAI service using Node and Express to optimize the performance, and locally stress-tested the service with K6. ',
+      'description': 'Re-built an existing API service using Node and Express to optimize the performance, and locally stress-tested the service with K6. ',
       'techStack': ['React', 'Javascript', 'SQL', 'Material UI']
     },
     {
@@ -26,7 +26,7 @@ const Experience = () => {
       'company': 'Software Engineering Application',
       'role': 'Front End Developer',
       'application': 'Catwalk',
-      'description': '',
+      'description': 'Modernized UI and reconstructed functionality for the Q&A widget of an e-commerce web application',
       'techStack': ['React', 'Javascript', 'POSTgresSQL', 'CSS']
     },
     {
