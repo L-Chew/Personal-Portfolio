@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import About from './About.jsx';
 import Experience from './Experience.jsx';
@@ -6,41 +6,43 @@ import Projects from './Projects.jsx';
 import logo from '../Images/Lorene-Chew.png';
 
 const Content = () => {
+  const rightSideRef = useRef(null);
 
   const handleClick = (e) => {
-    // setClickedTextColor((textColor) => (textColor === '#2DD4BE' ? '#CBD5E1' : '#2DD4BE'))
-    const y = document.getElementById(`${e.target.value}`).getBoundingClientRect().top + window.pageYOffset + -10;
-    // document.getElementById(`${e.target.value}`).scrollIntoView({block: 'end', behavior: 'smooth'});
-    window.scrollTo({top: y, behavior: 'smooth'})
+    const dataValue = e.target.dataset.value;
+    const element = document.getElementById(dataValue);
+
+    if (element && rightSideRef.current) {
+      const y = element.getBoundingClientRect().top - rightSideRef.current.getBoundingClientRect().top + rightSideRef.current.scrollTop;
+      rightSideRef.current.scrollTo({
+        top: y,
+        behavior: 'smooth' // Enable smoot scrolling only for the rightSide
+      });
+    }
+    // const y = document.getElementById(`${dataValue}`).getBoundingClientRect().top + window.pageYOffset + -10;
+    // window.scrollTo({top: y, behavior: 'smooth'})
   }
 
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 ml-20 mr-20'>
-      <div className='col-start-1'>
+      <div className='leftSide'>
         <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4'>
-          <div className='flex flex-col'>
+          <div className='col-start-2 sm:col-start-1 md:col-start-1 lg:col-start-1 xl:col-start-2 flex flex-col items-center'>
             <NavLink to='/' className='relative'>
-              <a href='' className='logo'>
-                <img className='object-scale-down' src={logo} />
+              <a href='object-scale-down' className='logo'>
+                <img className='' src={logo} />
               </a>
             </NavLink>
-            <div className='buttons flex flex-col'>
-              <button className='text-2xl sm:text-lg md:text-xl lg:text-2xl xl:text-3xl' onClick={handleClick} value='about'>About</button>
-              <button className='text-2xl sm:text-lg md:text-xl lg:text-2xl xl:text-3xl' onClick={handleClick} value='experience'>Experience</button>
-              <button className='text-2xl sm:text-lg md:text-xl lg:text-2xl xl:text-3xl' onClick={handleClick} value='projects'>Projects</button>
+            <div className='buttons flex flex-col items-center'>
+              <span className='about sm:text-md md:text-md lg:text-lg xl:text-xl' data-value='about' onClick={handleClick}>About</span>
+              <span className='experiene sm:text-md md:text-md lg:text-lg xl:text-xl' data-value='experience' onClick={handleClick}>Experience</span>
+              <span className='projects sm:text-md md:text-md lg:text-lg xl:text-xl' data-value='projects' onClick={handleClick}>Projects</span>
             </div>
           </div>
         </div>
       </div>
-      <div className='col-start-2'>
+      <div className='rightSide overflow-y-scroll h-screen' ref={rightSideRef}>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8'>
-          {/* <div className='col-start-1 sm:col-start-1 md:col-start-1 lg:col-start-2 xl:col-start-2'>
-            <div className='fixed flex flex-col h-screen justify-center pl-20 text-3xl'>
-              <button className='text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl' onClick={handleClick} value='about'> About </button>
-              <button className='text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl' onClick={handleClick} value='experience'> Experience </button>
-              <button className='text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl' onClick={handleClick} value='projects'> Projects </button>
-            </div>
-          </div> */}
           <div className='col-start-1 sm:col-start-1 sm:col-span-2 md:col-start-1 md:col-span-3 lg:col-start-1 lg:col-span-4 xl:col-start-1 xl:col-span-8'>
             <About />
             <Experience />
