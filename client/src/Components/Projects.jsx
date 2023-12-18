@@ -33,7 +33,7 @@ const Projects = () => {
   return (
     <div id='projects' className='h-[100vh]'>
       <div>
-        <h2 className='flex my-12 sm:text-xl md:text-xl lg:text-2xl xl:text-3xl text-[#fac1e9] font-semibold uppercase'>Projects</h2>
+        <h2 className='flex my-12 sm:text-xl lg:text-2xl xl:text-3xl text-[#fac1e9] font-semibold uppercase'>Projects</h2>
       </div>
       <div>
         <ol>
