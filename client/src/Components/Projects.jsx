@@ -31,7 +31,7 @@ const Projects = () => {
     }
   ]
   return (
-    <div id='projects'>
+    <div id='projects' className='h-[100vh]'>
       <div>
         <h2 className='flex my-12 sm:text-xl md:text-xl lg:text-2xl xl:text-3xl text-[#fac1e9] font-semibold uppercase'>Projects</h2>
       </div>
@@ -46,13 +46,16 @@ const Projects = () => {
                 <div className='flex items-center col-start-4 col-span-9'>
                   <div className='flex flex-col group-hover:text-[#fac1e9]'>
                     <span className='sm:text-md md:text-lg lg:text-xl xl:text-2xl font-semibold group-hover:text-[#fac1e9]'>
-                      <a href={project.link}>
-                        {project.application}
-                      </a>
+                      {project.application}
                     </span>
                     <span className='text-[#495678] sm:text-sm md:text-md lg:text-lg xl:text-xl'>
                       {project.description}
                     </span>
+                    <div className='flex w-fit items-center mt-4 rounded-full bg-[#fac1e9] bg-opacity-10 px-3 py-1 text-[#fac1e9]'>
+                      <a href={project.link} target='_blank' rel='noopener noreferrer'>
+                        View on GitHub
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
