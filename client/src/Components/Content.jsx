@@ -16,7 +16,7 @@ const Content = () => {
       const y = element.getBoundingClientRect().top - rightSideRef.current.getBoundingClientRect().top + rightSideRef.current.scrollTop;
       rightSideRef.current.scrollTo({
         top: y,
-        behavior: 'smooth' // Enable smoot scrolling only for the rightSide
+        behavior: 'smooth' // Enable smooth scrolling only for the rightSide
       });
     }
     // const y = document.getElementById(`${dataValue}`).getBoundingClientRect().top + window.pageYOffset + -10;
@@ -24,20 +24,18 @@ const Content = () => {
   }
 
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 ml-20 mr-20'>
-      <div className='leftSide'>
-        <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4'>
-          <div className='col-start-2 sm:col-start-1 md:col-start-1 lg:col-start-1 xl:col-start-2 flex flex-col items-center'>
-            <NavLink to='/' className='relative'>
-              <a href='object-scale-down' className='logo'>
-                <img className='' src={logo} />
-              </a>
-            </NavLink>
-            <div className='buttons flex flex-col items-center'>
-              <span className='about sm:text-md md:text-md lg:text-lg xl:text-xl' data-value='about' onClick={handleClick}>About</span>
-              <span className='experiene sm:text-md md:text-md lg:text-lg xl:text-xl' data-value='experience' onClick={handleClick}>Experience</span>
-              <span className='projects sm:text-md md:text-md lg:text-lg xl:text-xl' data-value='projects' onClick={handleClick}>Projects</span>
-            </div>
+    <div className='grid grid-cols-1 sm:grid-cols-2 ml-20 mr-20 min-w-[375px]'>
+      <div className='leftSide mb-10'>
+        <div className='flex flex-col items-center'>
+          <NavLink to='/' className='relative'>
+            <a href='object-scale-down' className='logo'>
+              <img className='' src={logo} />
+            </a>
+          </NavLink>
+          <div className='buttons flex flex-col items-center'>
+            <span className='about sm:text-md md:text-md lg:text-lg xl:text-xl' data-value='about' onClick={handleClick}>About</span>
+            <span className='experiene sm:text-md md:text-md lg:text-lg xl:text-xl' data-value='experience' onClick={handleClick}>Experience</span>
+            <span className='projects sm:text-md md:text-md lg:text-lg xl:text-xl' data-value='projects' onClick={handleClick}>Projects</span>
           </div>
         </div>
       </div>
