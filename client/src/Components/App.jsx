@@ -6,9 +6,11 @@ import Content from './Content.jsx';
 import GetInTouch from './GetInTouch.jsx';
 
 const App = () => {
-  // useEffect(() => {
-  //   setTimeout(() => setLoading(false), 10000)
-  // , []})
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 10000)
+  , []})
 
   return (
     <>
