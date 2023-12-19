@@ -1,25 +1,33 @@
-import React from 'react';
-import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import React, { useEffect, useState } from 'react';
+import { TypeAnimation } from 'react-type-animation';
 
 const Preloader = () => {
-  const [text] = useTypewriter({
-    words: [`Hello, I'm Lorene.`, `Welcome to my world!`],
-    typeSpeed: 120,
-    deleteSpeed: 120
-  })
+  const [textColor, setTextColor] = useState('white');
+
+  const [italic, setItalic] = useState(false);
+
+  const intro = `I'm Lorene`;
+
   return (
-  <div className='preloader h-[100vh] w-screen fixed flex items-center justify-center mx-0 mb-0 z-55'>
-    <div className='textContainer m-50px'>
-      <div>
-        <span>
-          {text}
-        </span>
-        <span>
-          <Cursor cursorStyle='|' />
-        </span>
-      </div>
+    <div className='preloader h-[100vh] w-screen fixed flex items-center justify-center m-50px z-55 text-3xl font-bold' style={{ color:textColor }}>
+      <TypeAnimation
+      sequence={[
+        `Hello`,
+        1000,
+        () => setTextColor('pink'),
+        `I'm Lorene`,
+        1000,
+        () => setTextColor('white'),
+        'Welcome to my world!',
+      ]}
+      wrapper="span"
+      cursor={true}
+      repeat={0}
+      style={{
+        whiteSpace: 'pre-line'
+      }}
+      />
     </div>
-  </div>
   )
 }
 
