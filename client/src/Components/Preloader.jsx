@@ -9,8 +9,8 @@ const Preloader = () => {
   const intro = `I'm Lorene`;
 
   return (
-    <div className='preloader h-[100vh] w-screen fixed flex items-center justify-center m-50px z-55 text-3xl font-bold' style={{ color:textColor }}>
-      <TypeAnimation
+    <div className='preloader h-[100vh] w-screen fixed flex items-center justify-center m-50px z-55 text-3xl font-bold pointer-events-none' style={{ color:textColor }}>
+      <TypeAnimation 
       sequence={[
         `Hello`,
         1000,
@@ -21,7 +21,7 @@ const Preloader = () => {
         'Welcome to my world!',
       ]}
       wrapper="span"
-      cursor={true}
+      cursor={false}
       repeat={0}
       style={{
         whiteSpace: 'pre-line'
