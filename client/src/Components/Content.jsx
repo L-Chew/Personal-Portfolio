@@ -24,7 +24,7 @@ const Content = () => {
   }
 
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-2 ml-20 mr-20 min-w-[375px]'>
+    <div className='animate-fadeIn grid grid-cols-1 sm:grid-cols-2 ml-20 mr-20 min-w-[375px]'>
       <div className='leftSide mb-10'>
         <div className='flex flex-col items-center'>
           <NavLink to='/' className='relative'>
