@@ -16,8 +16,7 @@ const App = () => {
         loading ? <Preloader />
         :
         <Routes>
-          {/* <Route exact path="/" element={<Hero />} /> */}
-          <Route path="/learn-more" element={<Content />} />
+          <Route exact path="/" element={<Content />} />
         </Routes>
       }
     </>
