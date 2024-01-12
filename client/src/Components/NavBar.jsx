@@ -4,7 +4,7 @@ import github from '../Images/github.svg';
 import linkedin from '../Images/linkedin.svg';
 import info from '../Images/info.svg';
 
-const divBar = () => {
+const navBar = () => {
   return (
     <>
       <nav className='sticky top-0 flex justify-between items-center text-sm'>
@@ -44,4 +44,4 @@ const divBar = () => {
   )
 }
 
-export default divBar;
+export default navBar;
