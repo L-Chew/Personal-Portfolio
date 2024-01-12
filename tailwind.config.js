@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       fontFamily: {
         'Roboto': ['Roboto'],
-        'Inter': ['Inter']
+        'Inter': ['Inter'],
+        'Fraunces': ['Fraunces']
       },
       animation: {
 				fadeIn: 'fadeIn 1s ease-in-out',
