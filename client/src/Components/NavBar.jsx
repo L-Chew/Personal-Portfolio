@@ -7,7 +7,7 @@ import info from '../Images/info.svg';
 const NavBar = () => {
   return (
     <>
-      <nav className='sticky top-0 flex justify-between items-center text-sm'>
+      <nav className='sticky top-0 flex justify-between items-center text-sm py-4 px-1'>
         <ul className='flex rounded-lg'>
           <li className='py-1 px-2'>
             <Link to='/'> Home </Link>
