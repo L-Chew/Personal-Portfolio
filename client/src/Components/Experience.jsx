@@ -43,7 +43,7 @@ const Experience = () => {
   return (
     <div id='experience'>
       <div>
-        <h2 className='flex my-12 sm:text-xl lg:text-2xl xl:text-3xl text-[#fac1e9] font-semibold uppercase'>Experience</h2>
+        <h2 className='flex my-12 sm:text-xl lg:text-2xl xl:text-3xl text-[#fac1e9] font-Fraunces font-extralight'>Experience</h2>
       </div>
       <div>
         <ol>
