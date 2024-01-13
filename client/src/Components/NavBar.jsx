@@ -8,7 +8,7 @@ const NavBar = () => {
   const navs = [
     {
       'link': '/',
-      'where': 'Home'
+      'where': 'Lorene'
     },
     {
       'link': '/projects',
