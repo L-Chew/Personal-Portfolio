@@ -3,8 +3,8 @@ import React from 'react';
 const About = () => {
 
   return (
-    <div id='about' className='animate-fadeIn'>
-      <h2 className='flex gap-4 md:gap-8 px-2 sm:text-xl md:text-xl lg:text-2xl xl:text-8xl text-[#fac1e9] font-Fraunces font-extralight'>
+    <div id='about' className='animate-fadeIn gap-4 md:gap-8 px-2'>
+      <h2 className='flex sm:text-xl md:text-xl lg:text-2xl xl:text-8xl text-[#fac1e9] font-Fraunces font-extralight'>
         about.
       </h2>
       <p>
