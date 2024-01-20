@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import profilePic from '../Images/profilePic.jpeg';
+import profilePic from '../../dist/Images/profilePic.jpeg';
 
 const Hero = () => {
 

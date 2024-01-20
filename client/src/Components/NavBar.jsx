@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import github from '../Images/github.svg';
-import linkedin from '../Images/linkedin.svg';
-import info from '../Images/info.svg';
+import github from '../../dist/Images/github.svg';
+import linkedin from '../../dist/Images/linkedin.svg';
+import info from '../../dist/Images/info.svg';
 
 const NavBar = () => {
   const navs = [
