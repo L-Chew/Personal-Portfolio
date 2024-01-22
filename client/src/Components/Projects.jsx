@@ -1,7 +1,7 @@
 import React from 'react';
-import pupper from '../Images/pupper.png';
-import catwalk from '../Images/catwalk.png';
-import products from '../Images/products.png';
+import pupper from '../../dist/Images/pupper.png';
+import catwalk from '../../dist/Images/catwalk.png';
+import products from '../../dist/Images/products.png';
 import ProjectCard from './ProjectCard.jsx';
 
 const Projects = () => {
