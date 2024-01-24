@@ -12,8 +12,8 @@ const GetInTouch = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const formBorder =
-    'bg-transparent border-solid border-white border rounded-md p-2';
+  // const formInputStyle =
+  //   'rounded-md border border-solid border-white bg-transparent bg-white p-2 text-[#424d5a] placeholder-[#424d5a]';
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -45,43 +45,56 @@ const GetInTouch = () => {
   };
 
   return (
-    <div className="animate-fadeIn">
-      <div className="flex flex-col gap-4 px-2 pb-20 md:gap-8">
-        <h2 className="font-Fraunces font-extralight text-[#fac1e9] sm:text-xl lg:text-2xl xl:text-8xl">
+    <div className='animate-fadeIn'>
+      <div className='flex flex-col gap-4 px-2 pb-20 md:gap-8'>
+        <h2 className='font-Fraunces font-extralight text-[#fac1e9] sm:text-xl lg:text-2xl xl:text-8xl'>
           get in touch.
         </h2>
-        <div className="group relative p-20">
-          <div className="pointer-events-none absolute inset-0 rounded-md bg-gradient-to-r from-pink-600 to-purple-600 opacity-20 blur"></div>
-          {/* <div className='absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full'></div> */}
-          <div className="grid grid-cols-1 justify-items-center gap-5 sm:grid-cols-2">
-            <div className="relative h-full w-full">
-              <img className="w-full object-cover" src={mail} alt="mail" />
+        <div className='group relative rounded-md bg-slate-300 p-20'>
+          <div className='pointer-events-none absolute inset-0 rounded-md bg-gradient-to-r from-pink-300 to-purple-600 opacity-50 blur'></div>
+          <div className='grid grid-cols-1 justify-items-center gap-5 sm:grid-cols-2'>
+            <div className='relative h-full w-full'>
+              <img
+                className='w-full object-cover brightness-0 '
+                src={mail}
+                alt='mail'
+              />
+              <div className='absolute -left-4 top-0 h-72 w-72 animate-blob rounded-full bg-purple-400 opacity-90 mix-blend-multiply blur-xl filter'></div>
+              <div className='animation-delay-2000 absolute left-52 top-0 h-72 w-72 animate-blob  rounded-full bg-blue-400 opacity-90 mix-blend-multiply blur-xl filter'></div>
+              <div className='animation-delay-4000 absolute -bottom-4 left-24 h-72 w-72 animate-blob rounded-full bg-pink-400 opacity-90 mix-blend-multiply blur-xl filter'></div>
             </div>
             <form
-              className="flex w-fit flex-col justify-center gap-y-4 md:w-full"
+              className='flex w-fit flex-col justify-center gap-y-4 md:w-full'
               onSubmit={handleSubmit}
             >
               <input
-                className={formBorder}
-                type="text"
-                placeholder="Your Name"
+                // className={`${formInputStyle}`}
+                className={`rounded-md border border-solid border-white bg-transparent bg-white p-2 text-[#424d5a] placeholder-[#424d5a]`}
+                type='text'
+                placeholder='Your Name'
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
               <input
-                className={formBorder}
-                type="email"
-                placeholder="Your Email"
+                // className={`${formInputStyle}`}
+                className={`rounded-md border border-solid border-white bg-transparent bg-white p-2 text-[#424d5a] placeholder-[#424d5a]`}
+                type='email'
+                placeholder='Your Email'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <textarea
-                className={`${formBorder} h-60 resize-none sm:h-40`}
-                placeholder="Your Message"
+                // className={`${formInputStyle} h-60 resize-none sm:h-40`}
+                className={`h-60 resize-none rounded-md border border-solid border-white bg-transparent bg-white p-2 text-[#424d5a] placeholder-[#424d5a] sm:h-40`}
+                placeholder='Your Message'
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
-              <button className={`${formBorder}`} type="submit">
+              <button
+                // className={`${formInputStyle} from-pink-600 to-purple-600 transition duration-1000 hover:bg-gradient-to-r hover:font-semibold hover:text-white hover:opacity-100 hover:duration-200`}
+                className={`rounded-md border border-solid border-white bg-transparent bg-white p-2 text-[#424d5a] placeholder-[#424d5a]`}
+                type='submit'
+              >
                 Submit
               </button>
             </form>
