@@ -13,15 +13,18 @@ const Content = () => {
     const element = document.getElementById(dataValue);
 
     if (element && rightSideRef.current) {
-      const y = element.getBoundingClientRect().top - rightSideRef.current.getBoundingClientRect().top + rightSideRef.current.scrollTop;
+      const y =
+        element.getBoundingClientRect().top -
+        rightSideRef.current.getBoundingClientRect().top +
+        rightSideRef.current.scrollTop;
       rightSideRef.current.scrollTo({
         top: y,
-        behavior: 'smooth' // Enable smooth scrolling only for the rightSide
+        behavior: 'smooth', // Enable smooth scrolling only for the rightSide
       });
     }
     // const y = document.getElementById(`${dataValue}`).getBoundingClientRect().top + window.pageYOffset + -10;
     // window.scrollTo({top: y, behavior: 'smooth'})
-  }
+  };
 
   return (
     <div className='animate-fadeIn grid grid-cols-1 sm:grid-cols-2 ml-20 mr-20 min-w-[375px]'>
@@ -33,9 +36,27 @@ const Content = () => {
             </a>
           </NavLink>
           <div className='buttons flex flex-col items-center'>
-            <span className='about sm:text-md md:text-md lg:text-lg xl:text-xl' data-value='about' onClick={handleClick}>About</span>
-            <span className='experiene sm:text-md md:text-md lg:text-lg xl:text-xl' data-value='experience' onClick={handleClick}>Experience</span>
-            <span className='projects sm:text-md md:text-md lg:text-lg xl:text-xl' data-value='projects' onClick={handleClick}>Projects</span>
+            <span
+              className='about sm:text-md md:text-md lg:text-lg xl:text-xl'
+              data-value='about'
+              onClick={handleClick}
+            >
+              About
+            </span>
+            <span
+              className='experiene sm:text-md md:text-md lg:text-lg xl:text-xl'
+              data-value='experience'
+              onClick={handleClick}
+            >
+              Experience
+            </span>
+            <span
+              className='projects sm:text-md md:text-md lg:text-lg xl:text-xl'
+              data-value='projects'
+              onClick={handleClick}
+            >
+              Projects
+            </span>
           </div>
         </div>
       </div>
@@ -49,7 +70,7 @@ const Content = () => {
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default Content;

@@ -11,7 +11,7 @@ const Hobbies = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default Hobbies;

@@ -7,40 +7,40 @@ import info from '../../dist/Images/info.svg';
 const NavBar = () => {
   const texts = [
     {
-      'link': '/',
-      'where': 'Lorene'
+      link: '/',
+      where: 'Lorene',
     },
     {
-      'link': '/projects',
-      'where': 'Projects'
+      link: '/projects',
+      where: 'Projects',
     },
     {
-      'link': '/reading',
-      'where': 'Reading'
+      link: '/reading',
+      where: 'Reading',
     },
     {
-      'link': '/hobbies',
-      'where': 'Hobbies'
-    }
+      link: '/hobbies',
+      where: 'Hobbies',
+    },
   ];
 
   const icons = [
     {
-      'href': 'https://github.com/L-Chew',
-      'src': github,
-      'alt': 'github'
+      href: 'https://github.com/L-Chew',
+      src: github,
+      alt: 'github',
     },
     {
-      'href': 'https://www.linkedin.com/in/lorenechew',
-      'src': linkedin,
-      'alt': 'LinkedIn'
+      href: 'https://www.linkedin.com/in/lorenechew',
+      src: linkedin,
+      alt: 'LinkedIn',
     },
     {
-      'href': null,
-      'link': '/getInTouch',
-      'src': info,
-      'alt': 'Contact'
-    }
+      href: null,
+      link: '/getInTouch',
+      src: info,
+      alt: 'Contact',
+    },
   ];
 
   return (
@@ -64,11 +64,19 @@ const NavBar = () => {
             <li key={index} className='py-1 px-2'>
               {icon.href ? (
                 <a href={icon.href} target='_blank' rel='noopener noreferrer'>
-                  <img className='h-9 transition duration-300 transform group-hover:scale-110' src={icon.src} alt={icon.alt}/>
+                  <img
+                    className='h-9 transition duration-300 transform group-hover:scale-110'
+                    src={icon.src}
+                    alt={icon.alt}
+                  />
                 </a>
               ) : (
                 <Link to={icon.link}>
-                  <img className='h-9 transition duration-300 transform group-hover:scale-110' src={icon.src} alt={icon.alt}/>
+                  <img
+                    className='h-9 transition duration-300 transform group-hover:scale-110'
+                    src={icon.src}
+                    alt={icon.alt}
+                  />
                 </Link>
               )}
             </li>

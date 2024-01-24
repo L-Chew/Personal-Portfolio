@@ -5,16 +5,10 @@
 @tailwind utilities;
 
 * > * {
-  font-family: 'Inter'
+  font-family: 'Inter';
 }
 
 body {
   background-color: #0f172a;
-  color: #CBD5E1;
+  color: #cbd5e1;
 }
-
-
-
-
-
-

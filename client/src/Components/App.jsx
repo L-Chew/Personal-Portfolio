@@ -14,14 +14,14 @@ const App = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 6600)
-  , []})
+    setTimeout(() => setLoading(false), 6600), [];
+  });
 
   return (
     <>
-      {
-        loading ? <Preloader />
-        :
+      {loading ? (
+        <Preloader />
+      ) : (
         <Routes>
           <Route exact path='/' element={<Layout />}>
             <Route path='/' element={<About />} />
@@ -31,10 +31,10 @@ const App = () => {
             <Route path='/getInTouch' element={<GetInTouch />} />
           </Route>
         </Routes>
-      }
+      )}
     </>
-  )
-}
+  );
+};
 
 export default App;
 
