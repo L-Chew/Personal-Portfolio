@@ -50,7 +50,7 @@ const GetInTouch = () => {
         <h2 className='font-Fraunces font-extralight text-[#fac1e9] sm:text-xl lg:text-2xl xl:text-8xl'>
           get in touch.
         </h2>
-        <div className='group relative rounded-md bg-slate-300 p-20'>
+        <div className='group relative rounded-2xl bg-slate-300 p-20'>
           <div className='pointer-events-none absolute inset-0 rounded-md bg-gradient-to-r from-pink-300 to-purple-600 opacity-50 blur'></div>
           <div className='grid grid-cols-1 justify-items-center gap-5 sm:grid-cols-2'>
             <div className='relative h-full w-full'>
