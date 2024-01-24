@@ -12,8 +12,8 @@ const GetInTouch = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  // const formInputStyle =
-  //   'rounded-md border border-solid border-white bg-transparent bg-white p-2 text-[#424d5a] placeholder-[#424d5a]';
+  // const formInputStyle = 'w-full rounded-md bg-transparent p-2 text-[#634485]';
+  // const inputDivStyle = 'rounded-md border border-solid border-purple-400 bg-white';
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -67,7 +67,9 @@ const GetInTouch = () => {
               className='flex w-fit flex-col justify-center gap-y-8 md:w-full'
               onSubmit={handleSubmit}
             >
-              <div className='rounded-md border border-solid border-white bg-white'>
+              <div className='rounded-md border border-solid border-purple-400 bg-white'>
+                {' '}
+                {/* className={`${inputDivStyle}`} */}
                 <label className='relative'>
                   <input
                     // className={`${formInputStyle}`}
@@ -82,7 +84,9 @@ const GetInTouch = () => {
                   </span>
                 </label>
               </div>
-              <div className='rounded-md border border-solid border-white bg-white'>
+              <div className='rounded-md border border-solid border-purple-400 bg-white'>
+                {' '}
+                {/* className={`${inputDivStyle}`} */}
                 <label className='relative'>
                   <input
                     // className={`${formInputStyle}`}
@@ -97,10 +101,12 @@ const GetInTouch = () => {
                   </span>
                 </label>
               </div>
-              <div className='rounded-md border border-solid border-white bg-white'>
+              <div className='rounded-md border border-solid border-purple-400 bg-white'>
+                {' '}
+                {/* className={`${inputDivStyle}`} */}
                 <label className='relative'>
                   <textarea
-                    // className={`${formInputStyle} h-60 resize-none sm:h-40`}
+                    // className={`${formInputStyle} h-60 w-full resize-none sm:h-40`}
                     className={`h-60 w-full resize-none rounded-md bg-transparent p-2 text-[#634485] sm:h-40`}
                     placeholder=''
                     value={message}
@@ -113,8 +119,7 @@ const GetInTouch = () => {
               </div>
               <button
                 // className={`${formInputStyle} hover:from-pink-600 to-purple-600 transition duration-1000 hover:bg-gradient-to-r hover:font-semibold hover:text-white hover:opacity-100 hover:duration-200`}
-                className={`rounded-md border border-solid border-white bg-white from-pink-600 to-purple-600 p-2 text-[#424d5a] hover:bg-gradient-to-r hover:font-semibold hover:text-white hover:opacity-100 hover:duration-200`}
-                // className='relative bg-white text-[$424d5a] border-none transition duration-200 pt-4 pr-12'
+                className={`rounded-md border border-solid border-purple-400 bg-white from-pink-600 to-purple-600 p-2 text-[#424d5a] hover:bg-gradient-to-r hover:font-semibold hover:text-white hover:opacity-100 hover:duration-200`}
                 type='submit'
               >
                 <span>Submit</span>
