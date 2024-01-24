@@ -91,8 +91,8 @@ const GetInTouch = () => {
                 onChange={(e) => setMessage(e.target.value)}
               />
               <button
-                // className={`${formInputStyle} from-pink-600 to-purple-600 transition duration-1000 hover:bg-gradient-to-r hover:font-semibold hover:text-white hover:opacity-100 hover:duration-200`}
-                className={`rounded-md border border-solid border-white bg-transparent bg-white p-2 text-[#424d5a] placeholder-[#424d5a]`}
+                // className={`${formInputStyle} hover:from-pink-600 to-purple-600 transition duration-1000 hover:bg-gradient-to-r hover:font-semibold hover:text-white hover:opacity-100 hover:duration-200`}
+                className={`rounded-md border border-solid border-white bg-transparent bg-white hover:bg-gradient-to-r from-pink-600 to-purple-600 p-2 text-[#424d5a] placeholder-[#424d5a] transition duration-1000 hover:font-semibold hover:text-white hover:opacity-100 hover:duration-200`}
                 type='submit'
               >
                 Submit
