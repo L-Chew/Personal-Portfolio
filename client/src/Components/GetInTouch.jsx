@@ -45,42 +45,43 @@ const GetInTouch = () => {
   };
 
   return (
-    <div className='animate-fadeIn'>
-      <div className='flex flex-col gap-4 px-2 pb-20 md:gap-8'>
-        <h2 className='font-Fraunces font-extralight text-[#fac1e9] sm:text-xl lg:text-2xl xl:text-8xl'>
+    <div className="animate-fadeIn">
+      <div className="flex flex-col gap-4 px-2 pb-20 md:gap-8">
+        <h2 className="font-Fraunces font-extralight text-[#fac1e9] sm:text-xl lg:text-2xl xl:text-8xl">
           get in touch.
         </h2>
-        <div className='group relative p-20'>
-          <div className='absolute inset-0 rounded-md bg-gradient-to-r from-pink-600 to-purple-600 opacity-20 blur pointer-events-none'></div>
-          <div className='grid grid-cols-1 justify-items-center gap-5 sm:grid-cols-2'>
-            <div className='relative h-full w-full'>
-              <img className='w-full object-cover' src={mail} alt='mail' />
+        <div className="group relative p-20">
+          <div className="pointer-events-none absolute inset-0 rounded-md bg-gradient-to-r from-pink-600 to-purple-600 opacity-20 blur"></div>
+          {/* <div className='absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full'></div> */}
+          <div className="grid grid-cols-1 justify-items-center gap-5 sm:grid-cols-2">
+            <div className="relative h-full w-full">
+              <img className="w-full object-cover" src={mail} alt="mail" />
             </div>
             <form
-              className='flex w-fit flex-col justify-center gap-y-4 md:w-full'
+              className="flex w-fit flex-col justify-center gap-y-4 md:w-full"
               onSubmit={handleSubmit}
             >
               <input
                 className={formBorder}
-                type='text'
-                placeholder='Your Name'
+                type="text"
+                placeholder="Your Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
               <input
                 className={formBorder}
-                type='email'
-                placeholder='Your Email'
+                type="email"
+                placeholder="Your Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <textarea
                 className={`${formBorder} h-60 resize-none sm:h-40`}
-                placeholder='Your Message'
+                placeholder="Your Message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
-              <button className={`${formBorder}`} type='submit'>
+              <button className={`${formBorder}`} type="submit">
                 Submit
               </button>
             </form>

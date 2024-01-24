@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "prettier": {
-    "singleQuote": true
+    "singleQuote": true,
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
   },
   "scripts": {
     "start": "nodemon server/index.js -w",
