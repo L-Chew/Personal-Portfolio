@@ -64,38 +64,60 @@ const GetInTouch = () => {
               <div className='animation-delay-4000 absolute -bottom-4 left-24 h-72 w-72 animate-blob rounded-full bg-pink-400 opacity-90 mix-blend-multiply blur-xl filter'></div>
             </div>
             <form
-              className='flex w-fit flex-col justify-center gap-y-4 md:w-full'
+              className='flex w-fit flex-col justify-center gap-y-8 md:w-full'
               onSubmit={handleSubmit}
             >
-              <input
-                // className={`${formInputStyle}`}
-                className={`rounded-md border border-solid border-white bg-transparent bg-white p-2 text-[#424d5a] placeholder-[#424d5a]`}
-                type='text'
-                placeholder='Your Name'
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-              <input
-                // className={`${formInputStyle}`}
-                className={`rounded-md border border-solid border-white bg-transparent bg-white p-2 text-[#424d5a] placeholder-[#424d5a]`}
-                type='email'
-                placeholder='Your Email'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <textarea
-                // className={`${formInputStyle} h-60 resize-none sm:h-40`}
-                className={`h-60 resize-none rounded-md border border-solid border-white bg-transparent bg-white p-2 text-[#424d5a] placeholder-[#424d5a] sm:h-40`}
-                placeholder='Your Message'
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-              />
+              <div className='rounded-md border border-solid border-white bg-white'>
+                <label className='relative'>
+                  <input
+                    // className={`${formInputStyle}`}
+                    className={`w-full rounded-md bg-transparent p-2 text-[#634485]`}
+                    type='text'
+                    placeholder=''
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                  <span className='input-text absolute -left-6 -top-1 mx-6 px-2 text-lg text-[#634485] text-opacity-80 transition duration-200'>
+                    Full Name
+                  </span>
+                </label>
+              </div>
+              <div className='rounded-md border border-solid border-white bg-white'>
+                <label className='relative'>
+                  <input
+                    // className={`${formInputStyle}`}
+                    className={`w-full rounded-md bg-transparent p-2 text-[#634485]`}
+                    type='text'
+                    placeholder=''
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <span className='input-text absolute -left-6 -top-1 mx-6 px-2 text-lg text-[#634485] text-opacity-80 transition duration-200'>
+                    Email
+                  </span>
+                </label>
+              </div>
+              <div className='rounded-md border border-solid border-white bg-white'>
+                <label className='relative'>
+                  <textarea
+                    // className={`${formInputStyle} h-60 resize-none sm:h-40`}
+                    className={`h-60 w-full resize-none rounded-md bg-transparent p-2 text-[#634485] sm:h-40`}
+                    placeholder=''
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                  />
+                  <span className='input-text absolute -left-6 mx-6 px-2 pt-1 text-lg text-[#634485] text-opacity-80 transition duration-200'>
+                    Message
+                  </span>
+                </label>
+              </div>
               <button
                 // className={`${formInputStyle} hover:from-pink-600 to-purple-600 transition duration-1000 hover:bg-gradient-to-r hover:font-semibold hover:text-white hover:opacity-100 hover:duration-200`}
-                className={`rounded-md border border-solid border-white bg-transparent bg-white hover:bg-gradient-to-r from-pink-600 to-purple-600 p-2 text-[#424d5a] placeholder-[#424d5a] transition duration-1000 hover:font-semibold hover:text-white hover:opacity-100 hover:duration-200`}
+                className={`rounded-md border border-solid border-white bg-white from-pink-600 to-purple-600 p-2 text-[#424d5a] hover:bg-gradient-to-r hover:font-semibold hover:text-white hover:opacity-100 hover:duration-200`}
+                // className='relative bg-white text-[$424d5a] border-none transition duration-200 pt-4 pr-12'
                 type='submit'
               >
-                Submit
+                <span>Submit</span>
               </button>
             </form>
           </div>
