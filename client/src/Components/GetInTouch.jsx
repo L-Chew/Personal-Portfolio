@@ -4,18 +4,33 @@ import {
   EMAILJS_SERVICE_ID,
   EMAILJS_TEMPLATE_ID,
   EMAILJS_PUBLIC_KEY,
+  VERIFALIA_API_KEY,
 } from '../../../config';
 import mail from '../../dist/Images/mail.png';
 import Modal from '../Components/Modal.jsx';
+import { VerifaliaRestClient } from 'verifalia';
+import { VERIFALIA_API_USER_KEY, VERFIFALIA_API_USER_PW } from '../../../config';
 
 const GetInTouch = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [modalOpen, setModalOpen] = useState(false);
+  const [emailValidity, setEmailValidity] = useState(false);
+
+  const verifalia = new VerifaliaRestClient({
+    username: VERIFALIA_API_USER_KEY,
+    password: VERFIFALIA_API_USER_PW
+  })
+
 
   // const formInputStyle = 'w-full rounded-md bg-transparent p-2 text-white lg:text-[#634485]';
   // const inputDivStyle = 'rounded-md border border-solid border-purple-400 bg-white';
+
+  // const emailValidationResult = await verifalia
+  //   .emailValidations
+  //   .submit(email)
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,44 +42,56 @@ const GetInTouch = () => {
       message: message,
     };
 
-    emailjs
-      .send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_PUBLIC_KEY,
-      )
+    verifalia.emailValidations
+      .submit(email)
+      .then((result) => {
+        const emailCheck = result.entries[0].classification;
+        // console.log('results.entries: ', result.entries[0].classification)
+        // console.log('emailCheck: ', emailCheck)
+        return emailCheck === 'Deliverable'
+          ? emailjs
+            .send(
+              EMAILJS_SERVICE_ID,
+              EMAILJS_TEMPLATE_ID,
+              templateParams,
+              EMAILJS_PUBLIC_KEY,
+            )
+          : Promise.reject('Invalid email'); //Promise.reject('Invalid email')
+      })
       .then((response) => {
         console.log('Email sent successfully!', response);
         // alert('Thank you for your email! I will get back to you soon!');
-        setModalOpen(true);
+        setEmailValidity(true);
+        setModalOpen(true); //true
         setName('');
         setEmail('');
         setMessage('');
       })
       .catch((error) => {
         console.error('Error sending email: ', error);
-      });
+        setEmailValidity(false);
+        setModalOpen(true);
+      })
   };
 
   const handleClose = () => {
-    setModalOpen(false);
+    setModalOpen(false); //false
   }
 
   return (
     <div className='animate-fadeIn'>
-      <Modal className='' open={modalOpen} onClose={handleClose} />
+      <Modal open={modalOpen} onClose={handleClose} validity={emailValidity} />
 
       <div className='flex flex-col gap-4 px-2 pb-20 md:gap-8'>
-        <h2 className='font-Fraunces font-extralight text-[#fac1e9] text-4xl lg:text-6xl xl:text-8xl'>
+        <h2 className='font-Fraunces text-4xl font-extralight text-[#fac1e9] lg:text-6xl xl:text-8xl'>
           get in touch.
         </h2>
         <div className='group relative rounded-2xl bg-slate-300 p-20'>
           <div className='pointer-events-none absolute inset-0 rounded-md bg-gradient-to-r from-pink-300 to-purple-600 opacity-50 blur'></div>
           <div className='grid grid-cols-1 justify-items-center gap-5 sm:grid-cols-2'>
-            <div className='relative h-full w-full'>
+            <div className='relative h-full'>
               <img
-                className='w-full object-cover brightness-0 '
+                className='w-full object-fill brightness-0'
                 src={mail}
                 alt='mail'
               />
@@ -76,12 +103,12 @@ const GetInTouch = () => {
               className='flex w-fit flex-col justify-center gap-y-8 md:w-full'
               onSubmit={handleSubmit}
             >
-              <div className='rounded-md border border-solid border-purple-400 bg-white'>
+              <div className='rounded-xl border border-solid border-purple-400 bg-white'>
                 {/* className={`${inputDivStyle}`} */}
                 <label className='relative'>
                   <input
                     // className={`${formInputStyle}`}
-                    className={`w-full rounded-md bg-transparent p-2 text-white xl:text-[#634485]`}
+                    className={`w-full rounded-xl bg-transparent p-3 text-white xl:text-[#634485]`}
                     type='text'
                     placeholder=''
                     value={name}
@@ -93,12 +120,12 @@ const GetInTouch = () => {
                   </span>
                 </label>
               </div>
-              <div className='rounded-md border border-solid border-purple-400 bg-white'>
+              <div className='rounded-xl border border-solid border-purple-400 bg-white'>
                 {/* className={`${inputDivStyle}`} */}
                 <label className='relative'>
                   <input
                     // className={`${formInputStyle}`}
-                    className={`w-full rounded-md bg-transparent p-2 text-white xl:text-[#634485]`}
+                    className={`w-full rounded-xl bg-transparent p-3 text-white xl:text-[#634485]`}
                     type='text'
                     placeholder=''
                     value={email}
@@ -110,12 +137,12 @@ const GetInTouch = () => {
                   </span>
                 </label>
               </div>
-              <div className='rounded-md border border-solid border-purple-400 bg-white'>
+              <div className='rounded-xl border border-solid border-purple-400 bg-white'>
                 {/* className={`${inputDivStyle}`} */}
                 <label className='relative'>
                   <textarea
                     // className={`${formInputStyle} h-60 w-full resize-none sm:h-40`}
-                    className={`h-60 w-full resize-none rounded-md bg-transparent p-2 text-white sm:h-40 xl:text-[#634485]`}
+                    className={`h-60 w-full resize-none rounded-xl bg-transparent p-3 text-white sm:h-40 xl:text-[#634485]`}
                     placeholder=''
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
@@ -128,7 +155,7 @@ const GetInTouch = () => {
               </div>
               <button
                 // className={`${formInputStyle} hover:from-pink-600 to-purple-600 transition duration-1000 hover:bg-gradient-to-r hover:font-semibold hover:text-white hover:opacity-100 hover:duration-200`}
-                className={`text-[#180e22] rounded-md border border-solid  border-purple-400 from-pink-600 to-purple-600 p-2 bg-white hover:bg-gradient-to-r hover:font-semibold hover:text-white hover:opacity-100 hover:duration-200`}
+                className={`rounded-xl border border-solid border-purple-400  bg-white from-pink-600 to-purple-600 p-2 text-[#180e22] hover:bg-gradient-to-r hover:font-semibold hover:text-white hover:opacity-100 hover:duration-200`}
                 type='submit'
               >
                 Submit
