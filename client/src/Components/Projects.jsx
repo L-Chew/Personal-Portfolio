@@ -68,14 +68,14 @@ const Projects = () => {
     },
   ];
   return (
-    <div id='projects' className='animate-fadeIn h-[100vh]'>
-      <div className='flex flex-col gap-4 md:gap-8 px-2 pb-20'>
-        <h2 className='sm:text-xl lg:text-2xl xl:text-8xl text-[#fac1e9] font-Fraunces font-extralight'>
+    <div id='projects' className='h-[100vh] animate-fadeIn'>
+      <div className='flex flex-col gap-4 px-2 pb-20 md:gap-8'>
+        <h2 className='font-Fraunces text-4xl font-extralight text-[#fac1e9] lg:text-6xl xl:text-8xl'>
           projects.
         </h2>
         <p> I like building things. </p>
       </div>
-      <div className='grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 grid-auto-rows-auto grid-auto-flow-dense'>
+      <div className='grid-auto-rows-auto grid-auto-flow-dense grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4'>
         {projects.map((project) => (
           <ProjectCard key={project.key} project={project} />
         ))}

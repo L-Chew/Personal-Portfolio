@@ -3,8 +3,8 @@ import profilePic from '../../dist/Images/profilePic.jpeg';
 
 const About = () => {
   return (
-    <div className='animate-fadeIn flex flex-col gap-4 md:gap-8 px-2'>
-      <h2 className='flex sm:text-xl md:text-xl lg:text-2xl xl:text-8xl text-[#fac1e9] font-Fraunces font-extralight'>
+    <div className='flex animate-fadeIn flex-col gap-4 px-2 md:gap-8'>
+      <h2 className='font-Fraunces text-4xl font-extralight text-[#fac1e9] lg:text-6xl xl:text-8xl'>
         about.
       </h2>
       <div className='flex items-center justify-evenly gap-4'>
@@ -18,7 +18,7 @@ const About = () => {
           <img
             src={profilePic}
             alt='profilePic'
-            className='w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-96 xl:h-96 object-cover rounded-full'
+            className='h-16 w-16 rounded-full object-cover sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-32 lg:w-32 xl:h-96 xl:w-96'
           />
           <div className='absolute inset-0 rounded-full bg-[#fac1e9] opacity-20'></div>
         </div>

@@ -86,6 +86,7 @@ const GetInTouch = () => {
                     placeholder=''
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    required
                   />
                   <span className='input-text absolute -left-6 -top-1 mx-6 px-2 text-lg text-white text-opacity-80 transition duration-200 xl:text-[#634485]'>
                     Full Name
@@ -102,6 +103,7 @@ const GetInTouch = () => {
                     placeholder=''
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    required
                   />
                   <span className='input-text absolute -left-6 -top-1 mx-6 px-2 text-lg text-white text-opacity-80 transition duration-200 xl:text-[#634485]'>
                     Email
@@ -117,6 +119,7 @@ const GetInTouch = () => {
                     placeholder=''
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
+                    required
                   />
                   <span className='input-text absolute -left-6 mx-6 px-2 pt-1 text-lg text-white text-opacity-80 transition duration-200 xl:text-[#634485]'>
                     Message
