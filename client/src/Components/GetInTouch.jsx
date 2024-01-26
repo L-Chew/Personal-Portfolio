@@ -16,21 +16,12 @@ const GetInTouch = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [modalOpen, setModalOpen] = useState(false);
-  const [emailValidity, setEmailValidity] = useState(false);
+  const [emailValidity, setEmailValidity] = useState(true);
 
   const verifalia = new VerifaliaRestClient({
     username: VERIFALIA_API_USER_KEY,
     password: VERFIFALIA_API_USER_PW
   })
-
-
-  // const formInputStyle = 'w-full rounded-md bg-transparent p-2 text-white lg:text-[#634485]';
-  // const inputDivStyle = 'rounded-md border border-solid border-purple-400 bg-white';
-
-  // const emailValidationResult = await verifalia
-  //   .emailValidations
-  //   .submit(email)
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -46,8 +37,6 @@ const GetInTouch = () => {
       .submit(email)
       .then((result) => {
         const emailCheck = result.entries[0].classification;
-        // console.log('results.entries: ', result.entries[0].classification)
-        // console.log('emailCheck: ', emailCheck)
         return emailCheck === 'Deliverable'
           ? emailjs
             .send(
@@ -56,13 +45,12 @@ const GetInTouch = () => {
               templateParams,
               EMAILJS_PUBLIC_KEY,
             )
-          : Promise.reject('Invalid email'); //Promise.reject('Invalid email')
+          : Promise.reject('Invalid email');
       })
       .then((response) => {
         console.log('Email sent successfully!', response);
-        // alert('Thank you for your email! I will get back to you soon!');
         setEmailValidity(true);
-        setModalOpen(true); //true
+        setModalOpen(true);
         setName('');
         setEmail('');
         setMessage('');
@@ -75,13 +63,13 @@ const GetInTouch = () => {
   };
 
   const handleClose = () => {
-    setModalOpen(false); //false
+    setModalOpen(false);
   }
 
   return (
     <div className='animate-fadeIn'>
       <Modal open={modalOpen} onClose={handleClose} validity={emailValidity} />
-
+      {/* Main Content */}
       <div className='flex flex-col gap-4 px-2 pb-20 md:gap-8'>
         <h2 className='font-Fraunces text-4xl font-extralight text-[#fac1e9] lg:text-6xl xl:text-8xl'>
           get in touch.
@@ -104,10 +92,8 @@ const GetInTouch = () => {
               onSubmit={handleSubmit}
             >
               <div className='rounded-xl border border-solid border-purple-400 bg-white'>
-                {/* className={`${inputDivStyle}`} */}
                 <label className='relative'>
                   <input
-                    // className={`${formInputStyle}`}
                     className={`w-full rounded-xl bg-transparent p-3 text-white xl:text-[#634485]`}
                     type='text'
                     placeholder=''
@@ -121,10 +107,8 @@ const GetInTouch = () => {
                 </label>
               </div>
               <div className='rounded-xl border border-solid border-purple-400 bg-white'>
-                {/* className={`${inputDivStyle}`} */}
                 <label className='relative'>
                   <input
-                    // className={`${formInputStyle}`}
                     className={`w-full rounded-xl bg-transparent p-3 text-white xl:text-[#634485]`}
                     type='text'
                     placeholder=''
@@ -138,10 +122,8 @@ const GetInTouch = () => {
                 </label>
               </div>
               <div className='rounded-xl border border-solid border-purple-400 bg-white'>
-                {/* className={`${inputDivStyle}`} */}
                 <label className='relative'>
                   <textarea
-                    // className={`${formInputStyle} h-60 w-full resize-none sm:h-40`}
                     className={`h-60 w-full resize-none rounded-xl bg-transparent p-3 text-white sm:h-40 xl:text-[#634485]`}
                     placeholder=''
                     value={message}
@@ -154,7 +136,6 @@ const GetInTouch = () => {
                 </label>
               </div>
               <button
-                // className={`${formInputStyle} hover:from-pink-600 to-purple-600 transition duration-1000 hover:bg-gradient-to-r hover:font-semibold hover:text-white hover:opacity-100 hover:duration-200`}
                 className={`rounded-xl border border-solid border-purple-400  bg-white from-pink-600 to-purple-600 p-2 text-[#180e22] hover:bg-gradient-to-r hover:font-semibold hover:text-white hover:opacity-100 hover:duration-200`}
                 type='submit'
               >
