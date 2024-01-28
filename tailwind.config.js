@@ -11,6 +11,7 @@ module.exports = {
       animation: {
         fadeIn: 'fadeIn 1s ease-in-out',
         blob: 'blob 7s infinite',
+        slideDown: 'slideDown 0.5s ease-in-out'
       },
       keyframes: {
         fadeIn: {
@@ -23,6 +24,10 @@ module.exports = {
           '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
           '100%': { transform: 'translate(0px, 0px) scale(1)' },
         },
+        slideDown: {
+          '0%': { transform: 'translate(0px, -80px)' },
+          '100%': { transform: 'translate(0px, 0px)' },
+        }
       },
     },
   },
