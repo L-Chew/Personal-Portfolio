@@ -46,7 +46,9 @@ const Slider = ({ activities }) => {
                     {activityGroup.sports ? '' : item.keycaps}
                   </p>
                 </div>
-                <RxArrowTopRight className='absolute bottom-5 left-5 h-[35px] w-[35px] text-white duration-100 group-hover:rotate-45 group-hover:text-pink-300' />
+                {groupIndex !== activities.length-1 || itemIndex !== items.length-1 ?
+                  <RxArrowTopRight className='absolute bottom-5 left-5 h-[35px] w-[35px] text-white duration-100 group-hover:rotate-45 group-hover:text-pink-300' /> : ''
+                }
               </div>
             </SwiperSlide>
           ));
