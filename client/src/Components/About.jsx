@@ -21,7 +21,7 @@ const About = () => {
               alt='profilePic'
               className='h-52 w-52 rounded-full object-cover md:h-64 md:w-64 lg:h-96 lg:w-96'
             />
-            <div className='absolute inset-0 rounded-full bg-[#fac1e9] opacity-20' />
+            <div className='absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 opacity-20' />
           </div>
         </div>
       </div>
@@ -30,6 +30,8 @@ const About = () => {
 };
 
 export default About;
+
+// bg-[#fac1e9]
 
 //sm:text-lg md:text-xl lg:text-2xl xl:text-3xl
 
