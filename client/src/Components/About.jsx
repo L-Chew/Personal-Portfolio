@@ -8,12 +8,25 @@ const About = () => {
         <h2 className='font-Fraunces text-6xl font-extralight text-[#fac1e9] lg:text-8xl'>
           about.
         </h2>
-        <div className='flex items-center justify-evenly gap-4'>
+        <div className='flex items-center justify-evenly gap-4 mt-10'>
           <p className='w-1/2 text-xl md:text-2xl'>
             In late 2021, I decided to quit my job to pursue a new career in
             software development. It all started from when I was leading a
-            project with a goal of consolidating all cross-functional teams'
-            data, originally in spreadsheets, to one local source. Seeing how our vision started to come to life as soon as a few lines of code were written, I was inspired. I no longer wanted to wait on someone else's availibity to build out a project. I wanted to be able to contribute more on the technical side and therefore made the tough descision to make the switch.
+            project to consolidate all cross-functional teams' data, originally
+            in offline spreadsheets, into one live database.
+            <br></br>
+            <br></br>
+            Seeing how our vision started to come to life with the help of a few
+            lines of code, I was inspired. I no longer wanted to do tedious,
+            low-impact work manipulating rows in spreadsheets manually, waiting
+            on others to save local files, and dealing with Excel crashes.
+            <br></br>
+            <br></br>
+            My goal as a software engineer is to use software to accelerate
+            productivity for myself and others around me. As a visual learner, I
+            enjoy seeing my work evolving right in front of me as I code and I
+            feel rewarded when I see hours of coding turn into a beautiful,
+            finished product.
           </p>
           <div className='relative'>
             <img
