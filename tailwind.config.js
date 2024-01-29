@@ -7,6 +7,7 @@ module.exports = {
         Roboto: ['Roboto'],
         Inter: ['Inter'],
         Fraunces: ['Fraunces'],
+        Raleway: ['Raleway']
       },
       animation: {
         fadeIn: 'fadeIn 1s ease-in-out',
