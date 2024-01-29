@@ -32,7 +32,7 @@ const Slider = ({ activities }) => {
           const items = Object.values(activityGroup)[0];
           return items.map((item, itemIndex) => (
             <SwiperSlide key={`group-${groupIndex}-items-${itemIndex}`}>
-              <div className='group relative mb-20 flex h-[250px] w-[215px] cursor-pointer flex-col gap-6 overflow-hidden rounded-xl hover:text-white text-pink-500 shadow-lg lg:h-[400px] lg:w-[350px] '>
+              <div className='group relative mb-20 flex h-[250px] w-[215px] flex-col gap-6 overflow-hidden rounded-xl hover:text-white shadow-lg lg:h-[400px] lg:w-[350px] '>
                 <div
                   className='inset-o absolute h-full w-full bg-cover bg-center'
                   style={{ backgroundImage: `url(${item.img})` }}
