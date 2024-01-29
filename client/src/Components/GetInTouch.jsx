@@ -17,6 +17,7 @@ const GetInTouch = () => {
   const [message, setMessage] = useState('');
   const [modalOpen, setModalOpen] = useState(false);
   const [emailValidity, setEmailValidity] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const verifalia = new VerifaliaRestClient({
     username: VERIFALIA_API_USER_KEY,
@@ -25,6 +26,8 @@ const GetInTouch = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    setLoading(true);
 
     const templateParams = {
       from_name: name,
@@ -60,6 +63,9 @@ const GetInTouch = () => {
         setEmailValidity(false);
         setModalOpen(true);
       })
+      .finally(() => {
+        setLoading(false);
+      })
   };
 
   const handleClose = () => {
@@ -68,7 +74,7 @@ const GetInTouch = () => {
 
   return (
     <div className='animate-fadeIn'>
-      <Modal open={modalOpen} onClose={handleClose} validity={emailValidity} />
+      <Modal open={modalOpen} onClose={handleClose} validity={emailValidity} loading={loading} />
       {/* Main Content */}
       <div className='flex flex-col gap-4 px-2 pb-20 md:gap-8'>
         <h2 className='font-Fraunces text-6xl font-extralight text-[#fac1e9] lg:text-8xl'>
