@@ -9,7 +9,7 @@ import { RxArrowTopRight } from 'react-icons/rx';
 
 const Slider = ({ activities }) => {
   return (
-    <div className='flex flex-col items-center'>
+    <div className='flex flex-col items-center mt-10'>
       <Swiper
         breakpoints={{
           340: {

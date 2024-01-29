@@ -76,7 +76,7 @@ const Projects = () => {
           projects.
         </h2>
       </div>
-      <div className='p-5 md:p-18'>
+      <div className='md:p-18'>
         <div className='columns-1 gap-5 lg:gap-8 sm:columns-2 lg:columns-3 [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8'>
           {projects.map((project) => (
             <ProjectCard key={project.key} project={project} />
