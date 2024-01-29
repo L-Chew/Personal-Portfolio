@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Preloader from './Preloader.jsx';
-// import Content from './Content.jsx';
-// import Content2 from './Content2.jsx';
 import Projects from './Projects.jsx';
 import Reading from './Reading.jsx';
 import Hobbies from './Hobbies.jsx';
@@ -11,7 +9,7 @@ import Layout from './Layout.jsx';
 import About from './About.jsx';
 
 const App = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 6600), [];
