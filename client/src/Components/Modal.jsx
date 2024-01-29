@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import mail from '../../dist/Images/mail.png';
-import closeButton from '../../dist/Images/closeButton.svg';
-import checkMark from '../../dist/Images/checkMark.svg';
-import exclamationMark from '../../dist/Images/exclamationMark.svg';
+import closeButton from '../../dist/Images/Email/closeButton.svg';
+import checkMark from '../../dist/Images/Email/checkMark.svg';
+import exclamationMark from '../../dist/Images/Email/exclamationMark.svg';
 
 const Modal = ({ validity, open, onClose }) => {
   return validity ? (

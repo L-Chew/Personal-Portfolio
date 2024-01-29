@@ -4,7 +4,7 @@ import profilePic from '../../dist/Images/profilePic.jpeg';
 const About = () => {
   return (
     <div className='flex animate-fadeIn flex-col gap-4 px-2 md:gap-8'>
-      <h2 className='font-Fraunces text-4xl font-extralight text-[#fac1e9] lg:text-6xl xl:text-8xl'>
+      <h2 className='font-Fraunces text-6xl font-extralight text-[#fac1e9] lg:text-8xl'>
         about.
       </h2>
       <div className='flex items-center justify-evenly gap-4'>

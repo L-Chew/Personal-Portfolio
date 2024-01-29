@@ -6,7 +6,7 @@ import {
   EMAILJS_PUBLIC_KEY,
   VERIFALIA_API_KEY,
 } from '../../../config';
-import mail from '../../dist/Images/mail.png';
+import mail from '../../dist/Images/Email/mail.png';
 import Modal from '../Components/Modal.jsx';
 import { VerifaliaRestClient } from 'verifalia';
 import { VERIFALIA_API_USER_KEY, VERFIFALIA_API_USER_PW } from '../../../config';
@@ -71,7 +71,7 @@ const GetInTouch = () => {
       <Modal open={modalOpen} onClose={handleClose} validity={emailValidity} />
       {/* Main Content */}
       <div className='flex flex-col gap-4 px-2 pb-20 md:gap-8'>
-        <h2 className='font-Fraunces text-4xl font-extralight text-[#fac1e9] lg:text-6xl xl:text-8xl'>
+        <h2 className='font-Fraunces text-6xl font-extralight text-[#fac1e9] lg:text-8xl'>
           get in touch.
         </h2>
         <div className='group relative rounded-2xl bg-slate-300 p-20'>
