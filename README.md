@@ -26,7 +26,7 @@
 
 - EmailJs, Verfalia API \
 
-## Instructions:
+## Instructions
 - clone git repo
 - npm i
 - npm run serve
