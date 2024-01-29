@@ -1,5 +1,6 @@
 # Personal-Portfolio
 
+[![Alt text](thumbnail_image_url)]([video_url](https://youtu.be/LJj_8pl5MI8))
 
 ## Technologies Used
 
