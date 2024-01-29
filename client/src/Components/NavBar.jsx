@@ -44,13 +44,13 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className='flex justify-between items-center text-sm py-4 px-1'>
+    <nav className='flex items-center justify-between bg-[#0f172a] bg-opacity-80 px-1 py-4 text-sm'>
       {/* left text nav */}
       <ul className='flex rounded-lg'>
         {texts.map((text, index) => (
-          <div key={index} className='relative group'>
-            <div className='absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-md blur opacity-0 group-hover:opacity-50 transition duration-1000 group-hover:duration-200'></div>
-            <li className='relative py-1 px-2 hover:rounded-md transition duration-200 group-hover:scale-110'>
+          <div key={index} className='group relative'>
+            <div className='absolute -inset-0.5 rounded-md bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 blur transition duration-1000 group-hover:opacity-50 group-hover:duration-200'></div>
+            <li className='relative px-2 py-1 transition duration-200 hover:rounded-md group-hover:scale-110'>
               <Link to={text.link}> {text.where} </Link>
             </li>
           </div>
@@ -59,13 +59,13 @@ const NavBar = () => {
       {/* right icon nav */}
       <ul className='flex rounded-lg'>
         {icons.map((icon, index) => (
-          <div key={index} className='relative group'>
-            <div className='absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-md blur opacity-0 group-hover:opacity-50 transition duration-1000 group-hover:duration-200'></div>
-            <li key={index} className='py-1 px-2'>
+          <div key={index} className='group relative'>
+            <div className='absolute -inset-0.5 rounded-md bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 blur transition duration-1000 group-hover:opacity-50 group-hover:duration-200'></div>
+            <li key={index} className='px-2 py-1'>
               {icon.href ? (
                 <a href={icon.href} target='_blank' rel='noopener noreferrer'>
                   <img
-                    className='h-9 transition duration-300 transform group-hover:scale-110'
+                    className='h-9 transform transition duration-300 group-hover:scale-110'
                     src={icon.src}
                     alt={icon.alt}
                   />
@@ -73,7 +73,7 @@ const NavBar = () => {
               ) : (
                 <Link to={icon.link}>
                   <img
-                    className='h-9 transition duration-300 transform group-hover:scale-110'
+                    className='h-9 transform transition duration-300 group-hover:scale-110'
                     src={icon.src}
                     alt={icon.alt}
                   />
