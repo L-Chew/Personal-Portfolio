@@ -30,4 +30,4 @@
 - clone git repo
 - npm i
 - npm run serve
-- -view on localhost:9000
+- view on localhost:9000
