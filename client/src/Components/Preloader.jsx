@@ -28,7 +28,7 @@ const Preloader = () => {
         repeat={0}
         style={{
           whiteSpace: 'pre-line',
-          'font-family': 'Fraunces',
+          'fontFamily': 'Fraunces',
         }}
       />
     </div>
