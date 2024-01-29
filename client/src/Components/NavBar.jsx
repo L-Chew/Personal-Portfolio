@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import github from '../../dist/Images/github.svg';
-import linkedin from '../../dist/Images/linkedin.svg';
-import info from '../../dist/Images/info.svg';
+import github from '../../dist/Images/Navigation/github.svg';
+import linkedin from '../../dist/Images/Navigation/linkedin.svg';
+import info from '../../dist/Images/Navigation/info.svg';
 
 const NavBar = () => {
   const texts = [

@@ -6,7 +6,7 @@ import {
   EMAILJS_PUBLIC_KEY,
   VERIFALIA_API_KEY,
 } from '../../../config';
-import mail from '../../dist/Images/mail.png';
+import mail from '../../dist/Images/Email/mail.png';
 import Modal from '../Components/Modal.jsx';
 import { VerifaliaRestClient } from 'verifalia';
 import { VERIFALIA_API_USER_KEY, VERFIFALIA_API_USER_PW } from '../../../config';
