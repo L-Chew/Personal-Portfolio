@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import NavBar from './NavBar.jsx';
-// import Footer from './Footer.jsx';
+import Footer from './Footer.jsx';
 
 const Layout = () => {
   return (
@@ -14,9 +14,9 @@ const Layout = () => {
         <Outlet />
       </main>
 
-      {/* <footer>
+      <footer>
         <Footer />
-      </footer> */}
+      </footer>
     </div>
   );
 };
