@@ -25,4 +25,10 @@
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss)
 
 
-- EmailJs, Verfalia API 
+- EmailJs, Verfalia API
+
+- Instructions:
+- clone git repo
+- npm i
+- npm run serve
+- -view on localhost:9000
