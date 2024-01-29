@@ -12,8 +12,8 @@ const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 6600), [];
-  });
+    setTimeout(() => setLoading(false), 6600);
+  },[]);
 
   return (
     <>
