@@ -26,5 +26,5 @@ https://l-chew.github.io/Personal-Portfolio/#/
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss)
 
 
-- EmailJs, Verfalia API \
+- EmailJs, Verfalia API 
 
