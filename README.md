@@ -1,4 +1,4 @@
-# Personal-Portfolio: (https://lorenechew.com)
+# Personal-Portfolio: https://lorenechew.com
 
 Built with Javascript ES6, React, React Router, Webpack, Babel. Deployed using GitHub Pages.
 
