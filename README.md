@@ -13,10 +13,11 @@ Built with Javascript ES6, React, React Router, Webpack, Babel. Deployed using G
 - Lazy loading on hobby tile images
 - Finetune mobile version
 
-# Local Setup
-1. Clone repository to your desktop
+## Local Setup
+1. Fork repository to your personal GitHub account
+2. Clone repository to your desktop:
    ```
-   git clone https://github.com/L-Chew/Personal-Portfolio.git
+   git clone <https://github.com/example/repo.git>
    ```
 2. Navigate to the directory and install dependencies:
    ```
