@@ -25,15 +25,15 @@ Built with Javascript ES6, React, React Router, Webpack, Babel. Deployed using G
    ```
 3. Create EmailJS and Verifalia accounts to obtain API key and values.
    - Create config.js file and add in keys/values based on variables located at the top of the GetInTouch component
-  ```
-  import {
-  EMAILJS_SERVICE_ID,
-  EMAILJS_TEMPLATE_ID,
-  EMAILJS_PUBLIC_KEY,
-  VERIFALIA_API_USER_KEY,
-  VERFIFALIA_API_USER_PW,
-  } from '../../../config.js';
-  ```
+    ```
+    import {
+    EMAILJS_SERVICE_ID,
+    EMAILJS_TEMPLATE_ID,
+    EMAILJS_PUBLIC_KEY,
+    VERIFALIA_API_USER_KEY,
+    VERFIFALIA_API_USER_PW,
+    } from '../../../config.js';
+    ```
 5. Build an start the app:
    ```
    npm run serve
