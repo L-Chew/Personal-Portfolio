@@ -5,7 +5,7 @@ https://l-chew.github.io/Personal-Portfolio/#/
 ![image](https://github.com/L-Chew/Personal-Portfolio/assets/70943828/6d54ff3e-5451-4a2e-a00a-de99ae72c3ac)
 ![image](https://github.com/L-Chew/Personal-Portfolio/assets/70943828/93e52424-265c-425b-bb7a-64fa09941600)
 ![image](https://github.com/L-Chew/Personal-Portfolio/assets/70943828/f7f568f2-3e3a-4cf5-a3b0-63d5660d0567)
-![image](https://github.com/L-Chew/Personal-Portfolio/assets/70943828/32ff8863-c8d0-4505-969a-39d5bca611cd)
+![image](https://github.com/L-Chew/Personal-Portfolio/assets/70943828/177d0b4f-6d61-48c4-a091-f0b174238e8f)
 ![image](https://github.com/L-Chew/Personal-Portfolio/assets/70943828/53f737c6-e373-407e-9a77-f5fac180b37b)
 
 
