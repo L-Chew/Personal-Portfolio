@@ -85,7 +85,7 @@ const GetInTouch = () => {
           <div className='grid grid-cols-1 justify-items-center gap-5 sm:grid-cols-2'>
             <div className='relative h-full'>
               <img
-                className='w-full object-fill brightness-0'
+                className='w-full object-fill brightness-0 filter invert'
                 src={mail}
                 alt='mail'
               />
