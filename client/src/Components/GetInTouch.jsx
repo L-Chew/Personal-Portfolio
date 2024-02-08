@@ -87,7 +87,7 @@ const GetInTouch = () => {
       </div>
       <div className='group relative rounded-2xl bg-slate-300 p-20'>
         <div className='pointer-events-none absolute inset-0 rounded-md bg-gradient-to-r from-pink-300 to-purple-600 opacity-50 blur'></div>
-        <div className='grid grid-cols-1 justify-items-center gap-5 md:grid-cols-2'>
+        <div className='grid grid-cols-1 justify-items-center gap-5 md:grid-cols-2 relative'>
           <div className='relative z-10 mr-0 flex h-full items-center md:mr-16'>
             <img className='invert filter' src={mail3} alt='mail' />
           </div>
