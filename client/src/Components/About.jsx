@@ -8,8 +8,8 @@ const About = () => {
         <h2 className='font-Fraunces text-6xl font-extralight text-[#fac1e9] lg:text-8xl'>
           about.
         </h2>
-        <div className='flex items-center justify-evenly gap-4 mt-10'>
-          <p className='w-1/2 text-xl md:text-2xl'>
+        <div className='mt-10 flex flex-col-reverse items-center justify-evenly gap-4 lg:flex-row'>
+          <p className='lg:w-1/2 text-xl md:text-2xl'>
             In late 2021, I decided to quit my job to pursue a new career in
             software development. It all started from when I was leading a
             project to consolidate all cross-functional teams' data, originally

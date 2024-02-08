@@ -20,7 +20,7 @@ const Modal = ({ validity, open, onClose, loading }) => {
         <div class='absolute left-0 top-0 h-5 w-5 animate-spin rounded-full border-t-2 border-purple-700'></div>
       </div>
       <div>
-        <img className='w-24 skew-y-12' src={turtle} />
+        <img className='w-24 skew-y-12 filter invert contrast-40' src={turtle} />
       </div>
     </div>
   ) : validity ? (
