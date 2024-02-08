@@ -4,15 +4,12 @@ import {
   EMAILJS_SERVICE_ID,
   EMAILJS_TEMPLATE_ID,
   EMAILJS_PUBLIC_KEY,
-  VERIFALIA_API_KEY,
-} from '../../../config';
+  VERIFALIA_API_USER_KEY,
+  VERFIFALIA_API_USER_PW,
+} from '../../../config.js';
 import mail3 from '../../dist/Images/Email/mail3.png';
 import Modal from '../Components/Modal.jsx';
 import { VerifaliaRestClient } from 'verifalia';
-import {
-  VERIFALIA_API_USER_KEY,
-  VERFIFALIA_API_USER_PW,
-} from '../../../config';
 
 const GetInTouch = () => {
   const [name, setName] = useState('');
