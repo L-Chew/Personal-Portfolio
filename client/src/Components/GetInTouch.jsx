@@ -7,7 +7,7 @@ import {
   VERIFALIA_API_USER_KEY,
   VERFIFALIA_API_USER_PW,
 } from '../../../config.js';
-import mail from '../../dist/Images/Email/mail.png';
+import mail3 from '../../dist/Images/Email/mail3.png';
 import Modal from '../Components/Modal.jsx';
 import { VerifaliaRestClient } from 'verifalia';
 
