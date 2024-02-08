@@ -1,13 +1,43 @@
-# Personal-Portfolio
+# Personal-Portfolio: https://lorenechew.com
 
-https://l-chew.github.io/Personal-Portfolio/#/
+Built with Javascript ES6, React, React Router, Webpack, Babel. Deployed using GitHub Pages.
 
-![image](https://github.com/L-Chew/Personal-Portfolio/assets/70943828/6d54ff3e-5451-4a2e-a00a-de99ae72c3ac)
-![image](https://github.com/L-Chew/Personal-Portfolio/assets/70943828/93e52424-265c-425b-bb7a-64fa09941600)
-![image](https://github.com/L-Chew/Personal-Portfolio/assets/70943828/f7f568f2-3e3a-4cf5-a3b0-63d5660d0567)
-![image](https://github.com/L-Chew/Personal-Portfolio/assets/70943828/32ff8863-c8d0-4505-969a-39d5bca611cd)
-![image](https://github.com/L-Chew/Personal-Portfolio/assets/70943828/53f737c6-e373-407e-9a77-f5fac180b37b)
+### Features: 
+- Typewriter animation upon website load
+- Dynamic color gradients on hover
+- Email functionality for contact form using EmailJS
+- Validate and verify user-entered email addresses to ensure data accuracy via Verifalia API
+- Teachstack tag indication for each project
+  
+### To Do:
+- Lazy loading on hobby tile images
+- Finetune mobile version
 
+## Local Setup
+1. Fork repository to your personal GitHub account
+2. Clone repository to your desktop:
+   ```
+   git clone <https://github.com/example/repo.git>
+   ```
+2. Navigate to the directory and install dependencies:
+   ```
+   npm install
+   ```
+3. Create EmailJS and Verifalia accounts to obtain API key and values.
+   - Create config.js file and add in keys/values based on variables located at the top of the GetInTouch component
+    ```
+    import {
+    EMAILJS_SERVICE_ID,
+    EMAILJS_TEMPLATE_ID,
+    EMAILJS_PUBLIC_KEY,
+    VERIFALIA_API_USER_KEY,
+    VERFIFALIA_API_USER_PW,
+    } from '../../../config.js';
+    ```
+5. Build an start the app:
+   ```
+   npm run serve
+   ```
 
 
 ## Technologies Used
@@ -26,5 +56,5 @@ https://l-chew.github.io/Personal-Portfolio/#/
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss)
 
 
-- EmailJs, Verfalia API \
+
 
