@@ -72,7 +72,7 @@ const GetInTouch = () => {
   };
 
   return (
-    <div className='animate-fadeIn'>
+    <div className='animate-fadeIn overflow-x-clip'>
       <Modal
         open={modalOpen}
         onClose={handleClose}
@@ -91,9 +91,9 @@ const GetInTouch = () => {
           <div className='relative z-10 mr-0 flex h-full items-center md:mr-16'>
             <img className='invert filter' src={mail3} alt='mail' />
           </div>
-          <div className='absolute -left-4 top-0 h-72 w-72 animate-blob rounded-full bg-purple-400 opacity-90 mix-blend-multiply blur-xl filter'></div>
-          <div className='animation-delay-2000 absolute left-52 top-0 h-72 w-72 animate-blob  rounded-full bg-blue-400 opacity-90 mix-blend-multiply blur-xl filter'></div>
-          <div className='animation-delay-4000 absolute -bottom-4 left-24 h-72 w-72 animate-blob rounded-full bg-pink-400 opacity-90 mix-blend-multiply blur-xl filter'></div>
+          <div className='absolute -left-4 top-0 h-72 w-72 animate-blob rounded-full bg-purple-400 opacity-90 mix-blend-multiply blur-xl filtern overflow-x-clip'></div>
+          <div className='animation-delay-2000 absolute left-52 top-0 h-72 w-72 animate-blob  rounded-full bg-blue-400 opacity-90 mix-blend-multiply blur-xl filter overflow-x-clip'></div>
+          <div className='animation-delay-4000 absolute -bottom-4 left-24 h-72 w-72 animate-blob rounded-full bg-pink-400 opacity-90 mix-blend-multiply blur-xl filter overflow-x-clip'></div>
           <form
             className=' flex w-fit flex-col justify-center gap-y-8 md:w-full'
             onSubmit={handleSubmit}
