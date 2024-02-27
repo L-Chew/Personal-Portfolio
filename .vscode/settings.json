@@ -3,5 +3,6 @@
   "prettier.singleQuote": true,
   "html.completion.attributeDefaultValue": "singlequotes",
   "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single"
+  "typescript.preferences.quoteStyle": "single",
+  "cSpell.words": ["verifalia"]
 }
